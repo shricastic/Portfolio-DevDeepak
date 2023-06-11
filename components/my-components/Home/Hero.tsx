@@ -8,7 +8,7 @@ const Font = Montserrat({
 
 export default function Hero({}: Props): ReactElement {
   return (
-    <div className="flex items-center justify-center absolute h-screen w-screen text-white  bg-transparent">
+    <div className="flex items-center justify-center z-40 absolute text-white  bg-transparent">
       <div
         className={`${Font.className} leading-tight px-14 text-2xl md:text-4xl lg:text-5xl font-semibold  max-w-6xl`}
       >

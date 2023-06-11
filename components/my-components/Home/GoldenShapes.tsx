@@ -16,8 +16,9 @@ export default function GoldenShapes({}: Props): ReactElement {
   const targetRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const controls = useAnimation();
+
   return (
-    <motion.div className="sticky top-0 h-screen max-w-[100dvw]">
+    <motion.div className="absolute h-full w-full z-40">
       <motion.div
         initial={{ opacity: 0 }}
         animate={controls}
@@ -25,6 +26,9 @@ export default function GoldenShapes({}: Props): ReactElement {
       >
         <Spline
           ref={targetRef}
+          onScroll={(e) => {
+            e.preventDefault();
+          }}
           scene="https://prod.spline.design/lPwY8NrODfpDr1iY/scene.splinecode"
           onLoad={() => {
             setIsLoading(false);
