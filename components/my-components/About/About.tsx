@@ -6,7 +6,7 @@ interface Props {}
 
 export default function About({}: Props): ReactElement {
   return (
-    <motion.div className="snap-start absolute top-1/2 h-screen z-40 bg-gradient-to-bl from-black to-slate-900">
+    <motion.div className="snap-start absolute top-1/2 h-screen z-40 bg-gradient-to-bl from-black to-slate-900 ">
       <div className="flex h-full  items-center justify-center flex-col xl:px-8">
         <div className="relative top-4 text-3xl font-bold tracking-widest text-white">
           About
