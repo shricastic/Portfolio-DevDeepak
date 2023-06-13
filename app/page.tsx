@@ -4,9 +4,6 @@ import Hero from "@/components/my-components/Home/Hero";
 import About from "@/components/my-components/About/About";
 import Projects from "@/components/my-components/Projects/Projects";
 
-export const metadata = {
-  title: "Web Dev | Deepak Bhattarai",
-};
 export default function Home() {
   return (
     <main className="relative overflow-x-hidden ">
