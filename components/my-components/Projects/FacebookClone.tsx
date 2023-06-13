@@ -28,14 +28,14 @@ export default function FacebookClone({}: Props): ReactElement {
     <motion.article
       ref={targetRef}
       style={{ x }}
-      className="flex h-screen w-screen flex-1  flex-col-reverse items-center justify-center p-4 text-white md:p-8 lg:flex-row lg:p-16"
+      className="flex h-screen w-screen flex-1 flex-col-reverse p-4 text-white md:p-8 lg:flex-row lg:items-center lg:justify-center lg:p-16"
     >
-      <div className="h-full flex-1 space-y-4">
-        <div className="relative h-3/4 w-full">
+      <div className="grid h-full flex-1 place-items-center lg:block lg:space-y-4">
+        <div className="relative h-96 w-full lg:h-3/4">
           <Image
             src={"/facebook-clone.png"}
             fill
-            className="object-contain"
+            className=" object-cover"
             alt="Facebook clone homepage image"
           ></Image>
         </div>
@@ -63,7 +63,7 @@ export default function FacebookClone({}: Props): ReactElement {
           </div>
           <Alert className="">
             <Terminal className="h-4 w-4"></Terminal>
-            <AlertTitle>Not Available to demo yet</AlertTitle>
+            <AlertTitle>Full version is not Available to demo yet</AlertTitle>
             <AlertDescription>
               Due to various complexation the deployment of this app has been
               delayed
@@ -72,10 +72,10 @@ export default function FacebookClone({}: Props): ReactElement {
         </div>
       </div>
       <motion.div
-        initial={{ y: "-12rem" }}
+        initial={{ y: "-100%" }}
         whileInView={{ y: 0 }}
         transition={{ duration: 1, type: "spring" }}
-        className={`text-center text-6xl font-bold text-[#1778F2] lg:flex-1 ${Font.className}`}
+        className={`py-4 text-center text-[clamp(3.2rem,3.75rem,10vw)]  font-bold text-[#1778F2] lg:flex-1 lg:py-0  ${Font.className}`}
       >
         facebook clone
       </motion.div>

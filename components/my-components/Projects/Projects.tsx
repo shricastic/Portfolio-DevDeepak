@@ -23,7 +23,7 @@ export default function Projects({}: Props): ReactElement {
     <motion.div
       style={{ x, y }}
       ref={targetRef}
-      className="sticky top-0 flex w-max flex-shrink-0 items-start gap-[50vw] overflow-hidden"
+      className="sticky top-0 flex w-max flex-shrink-0 items-start gap-[30vw] overflow-hidden lg:gap-[50vw]"
     >
       <ProjectsSectionTitle></ProjectsSectionTitle>
       <FacebookClone></FacebookClone>

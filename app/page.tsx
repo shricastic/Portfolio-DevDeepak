@@ -21,7 +21,7 @@ export default function Home() {
         <About></About>
       </section>
 
-      <section className="relative z-50  h-[200vh]  bg-black">
+      <section className="relative z-50 h-[200vh] bg-black">
         <Projects></Projects>
       </section>
     </main>
