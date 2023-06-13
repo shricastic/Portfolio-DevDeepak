@@ -6,13 +6,13 @@ interface Props {}
 
 export default function About({}: Props): ReactElement {
   return (
-    <motion.div className="snap-start absolute top-1/2 h-screen z-40 bg-gradient-to-bl from-black to-slate-900 ">
-      <div className="flex h-full  items-center justify-center flex-col xl:px-8">
+    <motion.div className="absolute top-1/2 z-40 h-screen snap-start bg-gradient-to-bl from-black to-slate-900 ">
+      <div className="flex h-full  flex-col items-center justify-center xl:px-8">
         <div className="relative top-4 text-3xl font-bold tracking-widest text-white">
           About
         </div>
 
-        <div className="flex h-full flex-col gap-4 lg:flex-row lg:items-center justify-center md:px-40 ">
+        <div className="flex h-full flex-col justify-center gap-4 md:px-40 lg:flex-row lg:items-center ">
           <motion.div
             initial={{ x: "-100%" }}
             whileInView={{
@@ -21,15 +21,21 @@ export default function About({}: Props): ReactElement {
                 duration: 0.5,
               },
             }}
-            className="-mt-8 md:mt-0 flex items-center justify-center  flex-shrink-0 overflow-hidden"
+            className="-mt-8 flex flex-shrink-0 items-center justify-center  overflow-hidden md:mt-0"
           >
-            <img
-              src={"/deepak.jpeg"}
-              className="
-              rounded-full md:rounded-2xl
-              aspect-auto h-40 w-40 md:h-80 md:w-80 lg:h-96 lg:w-auto object-cover object-top"
-              alt=""
-            />
+            <div
+              className="relative  h-40 w-40
+             rounded-full md:h-80 md:w-80 md:rounded-2xl lg:h-96"
+            >
+              <Image
+                fill
+                src={"/deepak.jpeg"}
+                className="
+              aspect-auto rounded-full
+              object-cover object-top md:rounded-2xl"
+                alt=""
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -40,7 +46,7 @@ export default function About({}: Props): ReactElement {
                 duration: 1,
               },
             }}
-            className="p-2 mx-4  text-base md:text-lg text-white font-mono"
+            className="mx-4 p-2  font-mono text-base text-white md:text-lg"
           >
             {"I'm"} a <strong> Full Stack Web Developer</strong> specializing in{" "}
             <span className="underline decoration-[#61Dbfb] decoration-wavy">

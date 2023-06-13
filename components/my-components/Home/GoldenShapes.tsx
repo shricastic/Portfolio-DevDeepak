@@ -18,7 +18,7 @@ export default function GoldenShapes({}: Props): ReactElement {
   const controls = useAnimation();
 
   return (
-    <motion.div className="absolute h-full w-full z-40">
+    <motion.div className="absolute z-40 h-full w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={controls}

@@ -8,12 +8,12 @@ const Font = Montserrat({
 
 export default function Hero({}: Props): ReactElement {
   return (
-    <div className="flex items-center justify-center z-40 absolute text-white  bg-transparent">
+    <div className="absolute z-40 flex items-center justify-center bg-transparent  text-white">
       <div
-        className={`${Font.className} leading-tight px-14 text-2xl md:text-4xl lg:text-5xl font-semibold  max-w-6xl`}
+        className={`${Font.className} max-w-6xl px-14 text-2xl font-semibold leading-tight md:text-4xl  lg:text-5xl`}
       >
         Hello! I am{" "}
-        <span className="font-bold lg:tracking-wide  text-golden">
+        <span className="font-bold text-golden  lg:tracking-wide">
           Deepak Bhattarai.
         </span>{" "}
         A developer who builds website that are{" "}
