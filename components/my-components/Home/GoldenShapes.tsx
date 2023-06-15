@@ -1,13 +1,8 @@
 "use client";
-import Spline from "@splinetool/react-spline";
+import dynamic from "next/dynamic";
+const Spline = dynamic(() => import("@splinetool/react-spline"), { ssr: true });
 import React, { ReactElement, useRef, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useAnimation,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Loader from "@/components/ui/Loader";
 
 interface Props {}
@@ -25,6 +20,7 @@ export default function GoldenShapes({}: Props): ReactElement {
         className="h-full"
       >
         <Spline
+          renderOnDemand={false}
           ref={targetRef}
           onScroll={(e) => {
             e.preventDefault();

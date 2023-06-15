@@ -3,6 +3,8 @@ import Background from "@/components/my-components/Home/Background";
 import Hero from "@/components/my-components/Home/Hero";
 import About from "@/components/my-components/About/About";
 import Projects from "@/components/my-components/Projects/Projects";
+import Skills from "@/components/my-components/Skills";
+import Contact from "@/components/my-components/Contact/Main";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <section className="relative z-50 h-[200vh] bg-black">
         <Projects></Projects>
       </section>
+      <Skills></Skills>
+      <Contact></Contact>
     </main>
   );
 }

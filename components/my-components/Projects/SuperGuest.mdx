@@ -1,3 +1,7 @@
+import Navbar from "../Navbar";
+
+<Navbar />
+
 # SuperGuest Website
 
 ## Overview
@@ -16,22 +20,26 @@ SuperGuest is an innovative website that leverages the GPT-3.5 API to deliver an
 
 ## Example Usage
 
-To illustrate the usage of SuperGuest, let's consider a scenario where a user wants to find the best hotels in Paris, France.
+To illustrate the modified usage of SuperGuest, let's consider a scenario where a user wants to find hotels in Paris, France based on their specific preferences.
 
 1. The user visits the SuperGuest website and is greeted with a clean and intuitive interface.
 
 2. On the homepage, the user finds a search bar where they can enter their desired location. The user enters "Paris" into the search bar and initiates the search.
 
-3. SuperGuest processes the user's query using the GPT-3.5 API. It comprehends the input and retrieves a list of top-rated hotels in Paris.
+3. The user is then presented with a text input asking for information such as price range, desired hotel setting (e.g., city center, near landmarks, etc.), preferred amenities (e.g., pool, gym, spa), and any other specific requirements they may have.
 
-4. The website generates a visually stunning output, showcasing high-quality images of the top hotels in Paris. Each hotel listing includes essential details such as the name, star rating, and price range.
+4. After the user completes the enters his/her preferences, SuperGuest processes the information and retrieves a list of hotels in Paris that match the user's specified criteria.
 
-5. The user can explore the hotel listings and review the accompanying ratings and reviews from previous guests.
+5. The website generates a visually appealing output, showcasing the relevant hotels in Paris. Each hotel listing includes essential details such as the name, star rating, and basic amenities.
 
-6. Based on the information provided, the user can make their selection and proceed with further research or reservations through their preferred booking platform or by contacting the hotels directly.
+6. The user can explore the hotel listings and view additional information about each hotel, such as location, description, and images.
 
 ## Conclusion
 
 SuperGuest is an exceptional website that utilizes the power of the GPT-3.5 API to offer users an outstanding hotel search experience. By combining advanced natural language processing with visually stunning outputs, SuperGuest simplifies the process of finding and exploring hotels. Whether for leisure or business travel, SuperGuest is the perfect tool to discover the best hotels in any location, ensuring a memorable and delightful stay.
 
-export default ({ children }) => <div className="prose p-4">{children}</div>;
+export default ({ children }) => (
+  <div className="prose w-full max-w-full p-4 pt-0 text-white scrollbar-w-2 scrollbar-thumb-rounded-full scrollbar-thumb-gray-400 scrollbar-track-black lg:overflow-y-scroll h-max sticky top-0 lg:w-[45%] lg:h-screen lg:max-w-max [&>h1]:text-red-500 [&_li::marker]:text-white [&_strong]:text-white">
+    {children}
+  </div>
+);

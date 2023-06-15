@@ -1,35 +1,58 @@
 import React, { ReactElement } from "react";
 import FacebookClone from "@/components/my-components/Projects/FacebookClone.mdx";
+
 import Images from "@/components/my-components/Projects/Images";
+import img1 from "../../asset/FacebookClone/img1.jpg";
+import img2 from "../../asset/FacebookClone/img2.jpg";
+import img3 from "../../asset/FacebookClone/img3.jpg";
+import img4 from "../../asset/FacebookClone/img4.jpg";
+import img5 from "../../asset/FacebookClone/img5.jpg";
+import img6 from "../../asset/FacebookClone/img6.jpg";
+import img7 from "../../asset/FacebookClone/img7.jpg";
+import img8 from "../../asset/FacebookClone/img8.jpg";
+import img9 from "../../asset/FacebookClone/img9.jpg";
+import img10 from "../../asset/FacebookClone/img10.jpg";
+import img11 from "../../asset/FacebookClone/img11.jpg";
+import img12 from "../../asset/FacebookClone/img12.jpg";
+import img13 from "../../asset/FacebookClone/img13.jpg";
+import img14 from "../../asset/FacebookClone/img14.jpg";
+import img15 from "../../asset/FacebookClone/img15.jpg";
+import img16 from "../../asset/FacebookClone/img16.jpg";
+
+import img17 from "../../asset/FacebookClone/img17.jpg";
+import img18 from "../../asset/FacebookClone/img18.jpg";
+import img19 from "../../asset/FacebookClone/img19.jpg";
+import img20 from "../../asset/FacebookClone/img20.jpg";
+
 interface Props {}
-const Images = [
-  "/FacebookClone/img1.jpg",
-  "/FacebookClone/img2.jpg",
-  "/FacebookClone/img3.jpg",
-  "/FacebookClone/img4.jpg",
-  "/FacebookClone/img5.jpg",
-  "/FacebookClone/img6.jpg",
-  "/FacebookClone/img7.jpg",
-  "/FacebookClone/img8.jpg",
-  "/FacebookClone/img9.jpg",
-  "/FacebookClone/img10.jpg",
-  "/FacebookClone/img11.jpg",
-  "/FacebookClone/img12.jpg",
-  "/FacebookClone/img13.jpg",
-  "/FacebookClone/img14.jpg",
-  "/FacebookClone/img15.jpg",
-  "/FacebookClone/img16.jpg",
-  "/FacebookClone/img17.jpg",
-  "/FacebookClone/img18.jpg",
-  "/FacebookClone/img19.jpg",
-  "/FacebookClone/img20.jpg",
+const ImageList = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img15,
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
 ];
 
 export default function FBClone({}: Props): ReactElement {
   return (
-    <div className="flex bg-black text-white">
+    <div className="lg:flex bg-black text-white lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden">
+      <Images images={ImageList} />
       <FacebookClone></FacebookClone>
-      <Images images={Images}/>
     </div>
   );
 }
