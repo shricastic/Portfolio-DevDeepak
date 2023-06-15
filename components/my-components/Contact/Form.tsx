@@ -2,12 +2,15 @@
 import React, { FormEvent, ReactElement } from "react";
 import { db } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 interface Props {}
 
 export default function Form({}: Props): ReactElement {
   return (
     <div className="text-black ">
+      <ToastContainer></ToastContainer>
       <form onSubmit={handleSubmit}>
         <div className="space-y-4 mb-4">
           <div>
@@ -49,11 +52,12 @@ export default function Form({}: Props): ReactElement {
           </div>
         </div>{" "}
         <div className="text-center">
-          <input
+          <button
             type="submit"
             className="px-4 py-2 bg-blue-500 rounded-md active:scale-95 cursor-pointer hover:bg-blue-400 transition-all duration-150"
-            value={"Lets Collaborate"}
-          />
+          >
+            Lets Collaborate
+          </button>
         </div>
       </form>
     </div>
