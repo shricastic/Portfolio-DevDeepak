@@ -1,14 +1,13 @@
 "use client";
 import dynamic from "next/dynamic";
 const Spline = dynamic(() => import("@splinetool/react-spline"), { ssr: true });
-import React, { ReactElement, useRef, useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import Loader from "@/components/ui/Loader";
 
 interface Props {}
 
 export default function GoldenShapes({}: Props): ReactElement {
-  const targetRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const controls = useAnimation();
 
@@ -21,7 +20,6 @@ export default function GoldenShapes({}: Props): ReactElement {
       >
         <Spline
           renderOnDemand={false}
-          ref={targetRef}
           onScroll={(e) => {
             e.preventDefault();
           }}
