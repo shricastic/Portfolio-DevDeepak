@@ -12,11 +12,6 @@ import img7 from "../../asset/superguest/img7.png";
 import Wrapper from "@/components/page-wrapper";
 const ImageList = [img1, img2, img3, img4, img5, img6, img7];
 
-export const metadata = {
-  title: "Superguest | Chatgpt integrated app",
-  description: "Chatgpt integrated app by Deepak Bhattarai",
-};
-
 export default function SuperGuestPage({}: Props): ReactElement {
   return (
     <Wrapper>

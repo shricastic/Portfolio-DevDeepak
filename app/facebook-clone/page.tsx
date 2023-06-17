@@ -25,11 +25,6 @@ import img19 from "../../asset/FacebookClone/img19.jpg";
 import img20 from "../../asset/FacebookClone/img20.jpg";
 import Wrapper from "@/components/page-wrapper";
 
-export const metadata = {
-  title: "Facebook Clone by Deepak",
-  description: "Facebook clone made by Deepak Bhattarai",
-};
-
 interface Props {}
 const ImageList = [
   img1,

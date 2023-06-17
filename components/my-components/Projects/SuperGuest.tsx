@@ -37,7 +37,7 @@ export default function SuperGuest({}: Props): ReactElement {
         <div className=" self-start justify-self-start text-lg lg:space-y-16">
           <div className="space-x-8">
             <Link
-              href={"/superguest"}
+              href={"/SuperGuest"}
               className="rounded-md bg-white px-4 py-2 font-bold text-black transition-all duration-150 hover:bg-white/70 active:scale-90"
             >
               Learn More
