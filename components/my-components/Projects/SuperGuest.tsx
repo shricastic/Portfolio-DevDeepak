@@ -22,6 +22,7 @@ export default function SuperGuest({}: Props): ReactElement {
     <motion.article
       ref={targetRef}
       style={{ x }}
+      id="superguest"
       className="flex h-screen w-screen flex-1 flex-col-reverse gap-12 p-4 text-white md:p-8 lg:flex-row lg:items-center lg:justify-center lg:gap-0 lg:p-16"
     >
       <div className=" h-full flex-1 space-y-16">

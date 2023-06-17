@@ -28,6 +28,7 @@ export default function FacebookClone({}: Props): ReactElement {
     <motion.article
       ref={targetRef}
       style={{ x }}
+      id="facebook-clone"
       className="flex min-h-screen w-screen flex-1 flex-col-reverse p-4 text-white md:p-8 lg:flex-row lg:items-center lg:justify-center lg:p-16"
     >
       <div className="grid h-full flex-1 place-items-center md:gap-4 lg:block lg:gap-0 lg:space-y-4">

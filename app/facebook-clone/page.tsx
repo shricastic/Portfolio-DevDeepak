@@ -23,6 +23,12 @@ import img17 from "../../asset/FacebookClone/img17.jpg";
 import img18 from "../../asset/FacebookClone/img18.jpg";
 import img19 from "../../asset/FacebookClone/img19.jpg";
 import img20 from "../../asset/FacebookClone/img20.jpg";
+import Wrapper from "@/components/page-wrapper";
+
+export const metadata = {
+  title: "Facebook Clone by Deepak",
+  description: "Facebook clone made by Deepak Bhattarai",
+};
 
 interface Props {}
 const ImageList = [
@@ -50,9 +56,11 @@ const ImageList = [
 
 export default function FBClone({}: Props): ReactElement {
   return (
-    <div className="lg:flex bg-black text-white lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden">
-      <Images images={ImageList} />
-      <FacebookClone></FacebookClone>
-    </div>
+    <Wrapper>
+      <div className="lg:flex bg-black text-white lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden">
+        <Images images={ImageList} />
+        <FacebookClone></FacebookClone>
+      </div>
+    </Wrapper>
   );
 }

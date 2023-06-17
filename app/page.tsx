@@ -6,10 +6,16 @@ import Projects from "@/components/my-components/Projects/Projects";
 import Skills from "@/components/my-components/Skills";
 import Contact from "@/components/my-components/Contact/Main";
 
+export const metadata = {
+  title: "Web Dev | Deepak Bhattarai",
+  description:
+    "A fullstack web developer that creates website that are more than just functional",
+};
+
 export default function Home() {
   return (
     <main className="relative overflow-x-hidden scroll-smooth">
-      <section className="relative top-full min-h-[200vh] w-screen snap-both snap-mandatory ">
+      <section className="relative top-full min-h-[200vh] w-screen snap-both snap-mandatory scroll-smooth">
         <div className="fixed top-0 h-screen w-screen">
           <section
             id="home"
@@ -22,7 +28,6 @@ export default function Home() {
         </div>
         <About></About>
       </section>
-
       <section id="projects" className="relative z-50 h-[200vh] bg-black">
         <Projects></Projects>
       </section>
