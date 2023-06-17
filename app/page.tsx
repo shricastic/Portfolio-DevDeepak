@@ -5,11 +5,10 @@ import About from "@/components/my-components/About/About";
 import Projects from "@/components/my-components/Projects/Projects";
 import Skills from "@/components/my-components/Skills";
 import Contact from "@/components/my-components/Contact/Main";
-import Navbar from "@/components/my-components/Navbar/Main";
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden ">
+    <main className="relative overflow-x-hidden scroll-smooth">
       <section className="relative top-full min-h-[200vh] w-screen snap-both snap-mandatory ">
         <div className="fixed top-0 h-screen w-screen">
           <section

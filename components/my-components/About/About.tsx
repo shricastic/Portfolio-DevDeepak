@@ -8,56 +8,24 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Navbar from "../Navbar/Main";
+import ScrollDownIndicator from "@/components/ui/ScrollDownIndicator";
 interface Props {}
 
 export default function About({}: Props): ReactElement {
-  const controls = useAnimation();
-  const [open, setOpen] = useState(false);
-
   const targetRef = useRef<HTMLDivElement>(null);
-  const NavbarRef = useRef<HTMLDivElement>(null);
-  // useIntersectionObserver(targetRef, display, hide);
-  const { scrollY, scrollYProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "start start"],
   });
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.01) display();
-    else hide();
-  });
-  async function display() {
-    if (NavbarRef.current) NavbarRef.current.style.display = "block";
-    controls.start({
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    });
-  }
-  async function hide() {
-    setOpen(false);
-    if (NavbarRef.current) {
-      await controls.start({
-        opacity: 0,
-        transition: {
-          duration: 0.5,
-        },
-      });
-      NavbarRef.current.style.display = "none";
-    }
-  }
+
+  // ! This tracks when the user scroll and display the navbar when they do and hides it when the user come backs to the top
 
   return (
     <motion.div
       id="about"
       className="absolute top-1/2 z-[999] lg:h-screen snap-start bg-gradient-to-bl from-black to-slate-900 "
     >
-      <Navbar
-        open={open}
-        setOpen={setOpen}
-        controls={controls}
-        ref={NavbarRef}
-      ></Navbar>
+      <Navbar scrollYProgress={scrollYProgress}></Navbar>
       <div className="relative flex min-h-screen h-max flex-col items-center xl:px-8">
         <div
           ref={targetRef}
