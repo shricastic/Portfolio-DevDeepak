@@ -1,18 +1,71 @@
 "use client";
-import React, { ReactElement, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { ReactElement, useRef, useState } from "react";
+import {
+  motion,
+  useAnimation,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import Image from "next/image";
+import Navbar from "../Navbar/Main";
 interface Props {}
 
 export default function About({}: Props): ReactElement {
+  const controls = useAnimation();
+  const [open, setOpen] = useState(false);
+
+  const targetRef = useRef<HTMLDivElement>(null);
+  const NavbarRef = useRef<HTMLDivElement>(null);
+  // useIntersectionObserver(targetRef, display, hide);
+  const { scrollY, scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "start start"],
+  });
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.01) display();
+    else hide();
+  });
+  async function display() {
+    if (NavbarRef.current) NavbarRef.current.style.display = "block";
+    controls.start({
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    });
+  }
+  async function hide() {
+    setOpen(false);
+    if (NavbarRef.current) {
+      await controls.start({
+        opacity: 0,
+        transition: {
+          duration: 0.5,
+        },
+      });
+      NavbarRef.current.style.display = "none";
+    }
+  }
+
   return (
-    <motion.div className="absolute top-1/2 z-40 h-screen snap-start bg-gradient-to-bl from-black to-slate-900 ">
-      <div className="flex h-full  flex-col items-center justify-center xl:px-8">
-        <div className="relative top-4 text-3xl font-bold tracking-widest text-white">
+    <motion.div
+      id="about"
+      className="absolute top-1/2 z-[999] lg:h-screen snap-start bg-gradient-to-bl from-black to-slate-900 "
+    >
+      <Navbar
+        open={open}
+        setOpen={setOpen}
+        controls={controls}
+        ref={NavbarRef}
+      ></Navbar>
+      <div className="relative flex min-h-screen h-max flex-col items-center xl:px-8">
+        <div
+          ref={targetRef}
+          className="relative top-4 text-3xl p-4 font-bold tracking-widest text-white"
+        >
           About
         </div>
-
-        <div className="flex h-full flex-col justify-center gap-4 md:px-40 lg:flex-row lg:items-center ">
+        <div className="flex-1 flex h-full flex-col justify-center gap-4 md:px-40 lg:flex-row lg:items-center ">
           <motion.div
             initial={{ x: "-100%" }}
             whileInView={{

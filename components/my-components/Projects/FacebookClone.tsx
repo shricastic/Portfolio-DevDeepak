@@ -28,7 +28,7 @@ export default function FacebookClone({}: Props): ReactElement {
     <motion.article
       ref={targetRef}
       style={{ x }}
-      className="flex h-screen w-screen flex-1 flex-col-reverse p-4 text-white md:p-8 lg:flex-row lg:items-center lg:justify-center lg:p-16"
+      className="flex min-h-screen w-screen flex-1 flex-col-reverse p-4 text-white md:p-8 lg:flex-row lg:items-center lg:justify-center lg:p-16"
     >
       <div className="grid h-full flex-1 place-items-center md:gap-4 lg:block lg:gap-0 lg:space-y-4">
         <div className="relative h-96 w-full lg:h-3/4 overflow-hidden">
@@ -87,7 +87,7 @@ export default function FacebookClone({}: Props): ReactElement {
         initial={{ y: "var(--translate)" }}
         whileInView={{ y: 0 }}
         transition={{ duration: 1, type: "spring" }}
-        className={`py-4 text-center text-[clamp(3.2rem,3.75rem,10vw)] font-bold text-[#1778F2] [--translate:-100%] 0  md:[--translate:0%] lg:flex-1 lg:py-0 lg:[--translate:-12rem]  ${Font.className}`}
+        className={`py-4 text-center text-[2rem] md:text-6xl font-bold text-[#1778F2] [--translate:-100%] 0  md:[--translate:0%] lg:flex-1 lg:py-0 lg:[--translate:-12rem]  ${Font.className}`}
       >
         facebook clone
       </motion.div>

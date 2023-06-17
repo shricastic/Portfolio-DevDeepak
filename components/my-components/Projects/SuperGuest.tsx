@@ -61,7 +61,7 @@ export default function SuperGuest({}: Props): ReactElement {
         className={`py-4 text-center lg:flex-1 lg:py-0`}
       >
         <span
-          className={`w-max overflow-hidden border border-white text-6xl font-bold text-white ${Font.className}`}
+          className={`w-max overflow-hidden border border-white text-[2rem] md:text-6xl font-bold text-white ${Font.className}`}
         >
           <span className="bg-red-500">Super</span>
           <span>Guest</span>

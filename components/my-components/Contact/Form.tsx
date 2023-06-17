@@ -23,7 +23,7 @@ export default function Form({}: Props): ReactElement {
     run();
   }, []);
   return (
-    <div className="text-black ">
+    <div className="text-black">
       <ToastContainer></ToastContainer>
       <form onSubmit={handleSubmit}>
         <div className="space-y-4 mb-4">

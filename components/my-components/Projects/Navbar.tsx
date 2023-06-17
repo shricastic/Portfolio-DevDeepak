@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 interface Props {}
 
 export default function Navbar({}: Props): ReactElement {

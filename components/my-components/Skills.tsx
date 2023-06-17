@@ -47,7 +47,10 @@ function Skill({ image, skill }: { image: StaticImageData; skill: string }) {
 
 export default function Skills({}: Props): ReactElement {
   return (
-    <section className="h-screen relative z-50 bg-black text-white">
+    <section
+      id="skills"
+      className="min-h-screen relative z-50 bg-black text-white"
+    >
       <div className="h-full flex flex-col xl:gap-12 items-center">
         <h1 className="text-4xl font-bold justify-self-center py-8">Skills</h1>
         <div className="flex flex-wrap items-center justify-center max-w-5xl gap-4 self-center">

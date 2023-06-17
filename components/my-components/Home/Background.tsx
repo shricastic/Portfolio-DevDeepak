@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Image from "next/image";
+
 interface Props {}
 
 export default function Background({}: Props): ReactElement {
