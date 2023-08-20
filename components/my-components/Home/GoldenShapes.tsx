@@ -44,7 +44,10 @@ export default function GoldenShapes({}: Props): ReactElement {
   });
 
   return (
-    <motion.div ref={targetRef} className="absolute z-40 h-full w-full">
+    <motion.div
+      ref={targetRef}
+      className="absolute z-40 h-full w-full bg-transparent"
+    >
       {shouldTheScrollIndicatorBeShown && (
         <ScrollDownIndicator
           scrollYProgress={scrollYProgress}
@@ -57,6 +60,7 @@ export default function GoldenShapes({}: Props): ReactElement {
       >
         <Spline
           renderOnDemand={false}
+          className="bg-transparent"
           onScroll={(e) => {
             e.preventDefault();
           }}

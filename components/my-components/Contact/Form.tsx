@@ -26,7 +26,7 @@ export default function Form({}: Props): ReactElement {
     <div className="text-black">
       <ToastContainer></ToastContainer>
       <form onSubmit={handleSubmit}>
-        <div className="space-y-4 mb-4">
+        <div className="space-y-4 mb-4 max-h-full">
           <div>
             <label htmlFor="name" className="block font-bold">
               Your Name
@@ -60,7 +60,7 @@ export default function Form({}: Props): ReactElement {
               rows={8}
               placeholder="Message"
               name="message"
-              className="p-2.5 w-full h-full  placeholder:text-gray-500/50  border-gray-500/70 focus:border-black border rounded-lg"
+              className="resize-none p-2.5 w-full h-full  placeholder:text-gray-500/50  border-gray-500/70 focus:border-black border rounded-lg"
               id="message"
             />
           </div>

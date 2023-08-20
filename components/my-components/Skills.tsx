@@ -13,13 +13,16 @@ import ChatGPTLogo from "../../public/chatgpt.png";
 import PythonLogo from "../../public/python.png";
 import ReduxLogo from "../../public/redux.png";
 import FramerMotionLogo from "../../public/framermotion.svg";
-
+import TensorFlowLogo from "../../public/TensorflowLogo.png";
+import HuggingFaceLogo from "../../public/hf-logo.png";
+import PineconeDB from "../../public/PineconeLogo.svg";
 const skillArray = [
   { image: ReactLogo, skill: "React" },
   { image: NextLogo, skill: "Next.js" },
   { image: NodeLogo, skill: "Node.js" },
   { image: MySQLLogo, skill: "MySQL" },
   { image: PostgresLogo, skill: "Postgres" },
+  { image: PineconeDB, skill: "Pinecone" },
   { image: JSLogo, skill: "JavaScript" },
   { image: FirebaseLogo, skill: "Firebase" },
   { image: TailwindCSSLogo, skill: "Tailwind CSS" },
@@ -27,6 +30,8 @@ const skillArray = [
   { image: PythonLogo, skill: "Python" },
   { image: ReduxLogo, skill: "Redux" },
   { image: FramerMotionLogo, skill: "Framer Motion" },
+  { image: TensorFlowLogo, skill: "Tensorflow" },
+  { image: HuggingFaceLogo, skill: "Hugging Face" },
 ];
 
 function Skill({ image, skill }: { image: StaticImageData; skill: string }) {

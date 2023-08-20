@@ -15,7 +15,7 @@ export default function Loader({}: Props): ReactElement {
       }}
       className="z-50 text-white fixed bottom-5 w-full h-32 p-4 flex items-center text-3d text-5xl"
     >
-      <div className="font-bold text-3d text-5xl [&>div]:inline mr-1">
+      <div className="font-bold text-3xl  text-3d md:text-5xl [&>div]:inline mr-1">
         <span className="">L</span>
         <span className="">O</span>
         <span className="">A</span>

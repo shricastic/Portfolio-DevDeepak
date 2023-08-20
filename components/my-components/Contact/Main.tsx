@@ -20,7 +20,7 @@ export default function Main({}: Props): ReactElement {
             <MyInfo></MyInfo>
           </div>
           <div className="h-full w-full flex lg:p-4 justify-end">
-            <div className="bg-white max-h-full w-full lg:w-[80%] overflow-y-auto scrollbar-w-2 scrollbar-thumb-rounded-full scrollbar-thumb-gray-500 rounded-lg p-4">
+            <div className="bg-white max-h-max w-full lg:w-[75%] overflow-y-auto scrollbar-w-2 scrollbar-thumb-rounded-full scrollbar-thumb-gray-500 rounded-lg p-4">
               <Form></Form>
             </div>
           </div>
