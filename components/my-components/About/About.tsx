@@ -29,10 +29,11 @@ export default function About({}: Props): ReactElement {
       <div className="relative flex min-h-screen h-max flex-col items-center xl:px-8">
         <div
           ref={targetRef}
-          className="relative top-4 text-3xl p-4 font-bold tracking-widest text-white"
+          className="relative text-3xl p-4 font-bold tracking-widest text-white"
         >
           About
         </div>
+
         <div className="flex-1 flex h-full flex-col justify-center gap-4 md:px-40 lg:flex-row lg:items-center ">
           <motion.div
             initial={{ x: "-100%" }}
@@ -42,7 +43,7 @@ export default function About({}: Props): ReactElement {
                 duration: 0.5,
               },
             }}
-            className="-mt-8 flex flex-shrink-0 items-center justify-center  overflow-hidden md:mt-0"
+            className="flex flex-shrink-0 items-center justify-center  overflow-hidden md:mt-0"
           >
             <div
               className="relative  h-40 w-40

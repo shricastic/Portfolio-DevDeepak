@@ -46,7 +46,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
           onMouseLeave={() => {
             setActiveHover(-1);
           }}
-          className="flex  p-8 h-full w-full text-4xl gap-4 flex-col [&>li]:flex-1 overflow-hidden"
+          className="flex p-4 w-full h-4/5 text-2xl flex-col [&>li]:flex-1 overflow-hidden"
         >
           {ListOfLinks.map((link, index) => {
             return (
@@ -111,19 +111,20 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
           onClick={() => {
             setOpen((prev) => !prev);
           }}
-          className="rounded-full grid place-items-center fixed right-4 top-4 bg-golden h-16 w-16 text-black shadow-md shadow-white/40"
+          className="rounded-full grid place-items-center fixed right-4 top-4 bg-golden h-12 w-12 md:h-16 md:w-16  text-black shadow-md shadow-white/40"
         >
           <button
             ref={buttonRef}
-            className="group grid place-items-center overflow-hidden h-16 w-16 rounded-full  [--button-color:white]"
+            className="group grid place-items-center overflow-hidden h-full w-full rounded-full  [--button-color:white]"
             aria-controls="primary-navigation"
             aria-expanded="false"
           >
             <svg
               stroke="var(--button-color)"
               fill="none"
-              className={`transition-all h-full w-full  duration-1000 group-aria-[expanded=true]:translate-x-[5px] 
-              group-aria-[expanded=true]:translate-y-[-5px]  group-aria-[expanded=true]:rotate-[0.125turn]`}
+              className={`transition-all h-full w-full  duration-1000 md:group-aria-[expanded=true]:translate-x-[5px] 
+              md:group-aria-[expanded=true]:translate-y-[-5px]  group-aria-[expanded=true]:translate-x-[2px] 
+              group-aria-[expanded=true]:translate-y-[-2px] group-aria-[expanded=true]:rotate-[0.125turn]`}
               viewBox="-10 -10 120 120"
             >
               <path
@@ -204,7 +205,7 @@ function useToggle(
           animate(
             "li",
             { x: 0, filter: "blur(0px)" },
-            { duration: 0.5, delay: stagger(0.05) }
+            { duration: 0.3, delay: stagger(0.01) }
           );
         } else {
           // ! Make the list go back to left again
