@@ -15,20 +15,40 @@ export default function Loader({}: Props): ReactElement {
       }}
       className="z-50 text-white fixed bottom-5 w-full h-32 p-4 flex items-center text-3d text-5xl"
     >
-      <div className="font-bold text-3xl  text-3d md:text-5xl [&>div]:inline mr-1">
-        <span className="">L</span>
-        <span className="">O</span>
-        <span className="">A</span>
-        <span className="">D</span>
-        <span className="">I</span>
-        <span className="">N</span>
-        <span className="">G</span>
-      </div>
-
-      <span className="animate-[bounce_500ms_150ms_infinite_alternate]">.</span>
-      <span className="animate-[bounce_500ms_200ms_infinite_alternate]">.</span>
-      <span className="animate-[bounce_500ms_250ms_infinite_alternate]">.</span>
-      <span className="animate-[bounce_500ms_300ms_infinite_alternate]">.</span>
+      <motion.div
+        animate={{
+          x: ["0vw", "90vw", "0vw"],
+          transition: {
+            default: {
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            },
+          },
+        }}
+      >
+        <motion.img
+          animate={{
+            rotateY: 180,
+            transition: {
+              rotateY: {
+                duration: 0.0001,
+                delay: 5,
+                repeat: Infinity,
+                repeatType: "mirror",
+                repeatDelay: 5,
+              },
+            },
+          }}
+          src="/stickman.gif"
+          initial={{ x: 0 }}
+          className="filter invert h-18 blur-0 w-12 object-contain -mb-8"
+        ></motion.img>
+        <span className="text-sm text-3d filter blur-0 tracking-wider">
+          Loading
+        </span>
+      </motion.div>
     </motion.div>
   );
 }

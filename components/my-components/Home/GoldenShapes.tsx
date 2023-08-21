@@ -1,6 +1,5 @@
 "use client";
-import dynamic from "next/dynamic";
-const Spline = dynamic(() => import("@splinetool/react-spline"), { ssr: true });
+import Spline from "@splinetool/react-spline";
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import {
   AnimatePresence,
@@ -44,10 +43,7 @@ export default function GoldenShapes({}: Props): ReactElement {
   });
 
   return (
-    <motion.div
-      ref={targetRef}
-      className="absolute z-40 h-full w-full bg-transparent"
-    >
+    <motion.div ref={targetRef} className="absolute z-40 h-full w-full">
       {shouldTheScrollIndicatorBeShown && (
         <ScrollDownIndicator
           scrollYProgress={scrollYProgress}
@@ -59,11 +55,7 @@ export default function GoldenShapes({}: Props): ReactElement {
         className="h-full"
       >
         <Spline
-          renderOnDemand={false}
-          className="bg-transparent"
-          onScroll={(e) => {
-            e.preventDefault();
-          }}
+          renderOnDemand={true}
           scene="https://prod.spline.design/lPwY8NrODfpDr1iY/scene.splinecode"
           onLoad={() => {
             setIsLoading(false);
@@ -76,7 +68,9 @@ export default function GoldenShapes({}: Props): ReactElement {
           }}
         />
       </motion.div>
-      <AnimatePresence>{isLoading && <Loader></Loader>}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isLoading && <Loader></Loader>}
+      </AnimatePresence>
     </motion.div>
   );
 }
