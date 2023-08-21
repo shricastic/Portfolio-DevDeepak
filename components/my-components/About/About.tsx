@@ -51,7 +51,7 @@ export default function About({}: Props): ReactElement {
             >
               <Image
                 fill
-                src={"/deepak.jpeg"}
+                src={"/deepak.jpg"}
                 className="
               aspect-auto rounded-full
               object-cover object-top md:rounded-2xl"

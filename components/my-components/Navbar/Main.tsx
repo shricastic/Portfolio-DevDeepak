@@ -205,7 +205,7 @@ function useToggle(
           animate(
             "li",
             { x: 0, filter: "blur(0px)" },
-            { duration: 0.3, delay: stagger(0.01) }
+            { duration: 0.2, delay: stagger(0.01) }
           );
         } else {
           // ! Make the list go back to left again
