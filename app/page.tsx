@@ -22,7 +22,10 @@ export default function Home() {
         </div>
         <About></About>
       </section>
-      <section id="projects" className="relative z-50 h-[200vh] bg-black">
+      <section
+        id="projects"
+        className="relative z-50 h-[200vh] md:h-[230vh] bg-black"
+      >
         <Projects></Projects>
       </section>
       <Skills></Skills>

@@ -2,7 +2,6 @@
 import React, { FormEvent, ReactElement, useEffect, useState } from "react";
 import { db, auth } from "@/lib/firebase";
 import { signInAnonymously } from "firebase/auth";
-
 import { Timestamp, doc, setDoc } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
