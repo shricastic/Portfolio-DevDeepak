@@ -23,7 +23,7 @@ export default function About({}: Props): ReactElement {
   return (
     <motion.div
       id="about"
-      className="absolute top-1/2 z-[999] lg:h-screen snap-start bg-gradient-to-bl from-black to-slate-900 "
+      className="relative z-[999] lg:h-screen snap-start bg-gradient-to-bl from-black to-slate-900 "
     >
       <Navbar scrollYProgress={scrollYProgress}></Navbar>
       <div className="relative flex min-h-screen h-max flex-col items-center lg:mt-4 xl:px-8">
@@ -34,7 +34,7 @@ export default function About({}: Props): ReactElement {
           About
         </div>
 
-        <div className="flex-1 flex h-full flex-col justify-center gap-4 md:px-40 lg:flex-row lg:items-center ">
+        <div className="flex-1 flex h-full flex-col justify-center gap-4 md:px-30 lg:flex-row lg:items-center ">
           <motion.div
             initial={{ x: "-100%" }}
             whileInView={{

@@ -54,7 +54,7 @@ export default function Skills({}: Props): ReactElement {
   return (
     <section
       id="skills"
-      className="min-h-screen relative z-50 bg-black text-white"
+      className="min-h-full relative z-50 bg-black text-white"
     >
       <div className="h-full flex flex-col xl:gap-12 items-center">
         <h1 className="text-4xl font-bold justify-self-center py-8">Skills</h1>
