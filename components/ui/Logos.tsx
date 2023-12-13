@@ -113,7 +113,7 @@ export function Quote() {
 export function FacebookClone() {
   return (
     <div
-      className={`py-4 w-max text-[2rem] md:text-6xl font-bold text-[#1778F2]  lg:flex-1 lg:py-0  `}
+      className={`py-4 w-max h-full text-[2rem] md:text-5xl lg:text-6xl font-bold text-[#1778F2]  lg:flex-1 lg:py-0  `}
     >
       facebook clone
     </div>
@@ -133,7 +133,7 @@ export function SuperGuest() {
   return (
     <div className={`py-4 text-center lg:flex-1 lg:py-0`}>
       <span
-        className={`w-max overflow-hidden border border-white text-[2rem] md:text-6xl font-bold text-white ${Font.className}`}
+        className={`w-max overflow-hidden border border-white text-[2rem] md:text-5xl lg:text-6xl font-bold text-white ${Font.className}`}
       >
         <span className="bg-red-500">Super</span>
         <span>Guest</span>

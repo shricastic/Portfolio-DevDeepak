@@ -8,6 +8,7 @@ import Link from "next/link";
 
 type Props = {
   id: string;
+  category: string[];
   previewImage: StaticImageData;
   description: string;
   learnMoreLink: string;
@@ -19,7 +20,7 @@ type Props = {
 };
 
 export default function ProjectTemplate({
-  id,
+  category,
   previewImage,
   primaryColor,
   secondaryColor,
@@ -32,11 +33,14 @@ export default function ProjectTemplate({
   const ref = useRef<HTMLDivElement>(null);
   return (
     <motion.div>
-      <div className="flex flex-col min-height-screen items-center lg:flex-row p-4 relative">
-        <div ref={ref} className="h-screen w-full text-white grid items-center">
+      <div className="flex flex-col-reverse min-height-screen items-center gap-8 lg:flex-row p-4 relative lg:space-y-0 md:p-32">
+        <div
+          ref={ref}
+          className="lg:h-screen  w-full text-white grid items-center"
+        >
           <div className="space-y-8">
             <div className="space-y-8">
-              <h1 className="h-16 relative overflow-hidden w-max">
+              <h1 className="h-16 py-1 relative overflow-hidden w-max">
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -82,15 +86,19 @@ export default function ProjectTemplate({
                   }}
                   // viewport={{ once: true }}
                 >
-                  {description}
+                  {category.map((name, index) => {
+                    return (
+                      <span className="text-3xl font-sans font-bold">
+                        {name} {index + 1 != category.length && ". "}
+                      </span>
+                    );
+                  })}
                 </motion.span>
 
                 <motion.span
                   initial={{
                     position: "absolute",
-                    height: "2.5rem",
-                    top: 0,
-                    left: 0,
+                    inset: 0,
                     right: "40%",
                     zIndex: 100,
                     backgroundColor: color,
@@ -110,13 +118,23 @@ export default function ProjectTemplate({
                     },
                   }}
                 ></motion.span>
+              </div>
+              <div className=" text-lg font-sans max-w-xl h-max text-white relative overflow-hidden">
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  whileInView={{
+                    opacity: 1,
+                    transition: { duration: 0, delay: 0.7 },
+                  }}
+                  // viewport={{ once: true }}
+                >
+                  {description}
+                </motion.span>
 
                 <motion.span
                   initial={{
                     position: "absolute",
-                    height: "2.5rem",
-                    top: "3rem",
-                    left: 0,
+                    inset: 0,
                     right: "40%",
                     zIndex: 100,
                     backgroundColor: color,
