@@ -28,7 +28,7 @@ const Project = [
     githubLink: "https://github.com/DevDeepakBhattarai/Travel_MVP",
     category: ["WebApp", "ChatGPT", "Design"],
     previewImage: SuperGuestImage,
-    learnMoreLink: "/superguest",
+    learnMoreLink: "/super-guest",
     color: "red",
     logo: SuperGuest,
     primaryColor: "from-red-500",
