@@ -63,7 +63,7 @@ export default function ProjectTemplate({
                   // viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
-                    translateX: "100%",
+                    translateX: "150%",
                     transition: {
                       right: {
                         duration: 0.1,
@@ -106,7 +106,7 @@ export default function ProjectTemplate({
                   // viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
-                    translateX: "100%",
+                    translateX: "150%",
                     transition: {
                       right: {
                         duration: 0.1,
@@ -142,7 +142,7 @@ export default function ProjectTemplate({
                   // viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
-                    translateX: "100%",
+                    translateX: "150%",
                     transition: {
                       right: {
                         duration: 0.1,
