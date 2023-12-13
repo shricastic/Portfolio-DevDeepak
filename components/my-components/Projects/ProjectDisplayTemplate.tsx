@@ -47,7 +47,7 @@ export default function ProjectTemplate({
                     opacity: 1,
                     transition: { duration: 0, delay: 0.7 },
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                 >
                   {children}
                 </motion.span>
@@ -60,7 +60,7 @@ export default function ProjectTemplate({
                     zIndex: 100,
                     backgroundColor: color,
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
                     translateX: "150%",
@@ -84,7 +84,7 @@ export default function ProjectTemplate({
                     opacity: 1,
                     transition: { duration: 0, delay: 0.7 },
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                 >
                   {category.map((name, index) => {
                     return (
@@ -103,7 +103,7 @@ export default function ProjectTemplate({
                     zIndex: 100,
                     backgroundColor: color,
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
                     translateX: "150%",
@@ -126,7 +126,7 @@ export default function ProjectTemplate({
                     opacity: 1,
                     transition: { duration: 0, delay: 0.7 },
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                 >
                   {description}
                 </motion.span>
@@ -139,7 +139,7 @@ export default function ProjectTemplate({
                     zIndex: 100,
                     backgroundColor: color,
                   }}
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                   whileInView={{
                     right: ["0%", "0%"],
                     translateX: "150%",
