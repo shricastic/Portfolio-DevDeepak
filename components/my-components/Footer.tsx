@@ -47,25 +47,25 @@ export default function Footer({}: Props): ReactElement {
           <h3 className="text-bold text-lg"> Connect </h3>
           <div className="flex flex-row gap-2 py-4">
             <a
-              href=""
+              href="https://youtube.com/@deepakbhattarai-freelancer?si=BFhVe0NngaQwcRDI"
               className="hover:scale-95 transition-transform duration-150 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16"
             >
               <Youtube />
             </a>
             <a
-              href=""
+              href="https://github.com/DevDeepakBhattarai"
               className="hover:scale-90 transition-transform duration-150 scale-95 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16"
             >
               <Github />
             </a>
             <a
-              href=""
+              href="https://www.reddit.com/user/DeepakBhattarai69"
               className="hover:scale-95 transition-transform duration-150 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16 "
             >
               <Reddit></Reddit>
             </a>
             <a
-              href=""
+              href="https://twitter.com/deepak_the_dev"
               className="hover:scale-95 transition-transform duration-150 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16"
             >
               <X></X>
