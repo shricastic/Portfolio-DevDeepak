@@ -9,9 +9,9 @@ import Footer from "@/components/my-components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden scroll-smooth">
-      <section className="relative top-full w-screen snap-both snap-mandatory scroll-smooth">
-        <div className="fixed top-0 h-screen w-screen">
+    <main className="overflow-x-hidden">
+      <section className="w-full">
+        <div className="fixed top-0 h-screen w-full">
           <section
             id="home"
             className="relative grid h-screen place-items-center"
@@ -27,9 +27,7 @@ export default function Home() {
         <About></About>
         <Skills></Skills>
 
-        <section id="projects" className="relative z-50 bg-black">
-          <Projects></Projects>
-        </section>
+        <Projects></Projects>
 
         <Contact></Contact>
         <Footer></Footer>

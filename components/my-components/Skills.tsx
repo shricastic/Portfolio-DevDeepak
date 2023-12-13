@@ -37,14 +37,14 @@ const skillArray = [
 function Skill({ image, skill }: { image: StaticImageData; skill: string }) {
   return (
     <div className="h-28  md:h-40 aspect-square shadow-md hover:scale-105 border border-white/20 shadow-white flex flex-col p-2 rounded-md hover:bg-gray-700 transition-all duration-150">
-      <span className="relative h-full w-full ">
+      <div className="relative h-full w-full ">
         <Image
           fill
           src={image}
           alt={`${skill.toUpperCase()}'s Logo`}
           className="object-contain"
         ></Image>
-      </span>
+      </div>
       <h3 className="text-center font-bold">{skill} </h3>
     </div>
   );

@@ -23,7 +23,7 @@ export default function About({}: Props): ReactElement {
   return (
     <motion.div
       id="about"
-      className="relative z-[999] lg:h-screen snap-start bg-gradient-to-bl from-black to-slate-900 "
+      className="relative z-[999] lg:h-screen bg-gradient-to-bl from-black to-slate-900"
     >
       <Navbar scrollYProgress={scrollYProgress}></Navbar>
       <div className="relative flex min-h-screen h-max flex-col items-center lg:mt-4 xl:px-8">

@@ -1,4 +1,4 @@
-import PDFReader from "@/components/my-components/Projects/PDFReader.mdx";
+import PDFReader from "@/components/mdx/PDFReader.mdx";
 import Wrapper from "@/components/page-wrapper";
 
 export default function page() {

@@ -27,7 +27,7 @@ const ProjectSectionTitle = () => {
   return (
     <motion.div
       ref={targetRef}
-      className="flex h-screen w-screen flex-1 items-center justify-center"
+      className="flex h-screen w-screen flex-1 items-center justify-center overflow-hidden"
     >
       <motion.div className="pointer-events-none relative grid aspect-square h-[50%] items-center">
         <motion.div

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import FacebookClone from "@/components/my-components/Projects/FacebookClone.mdx";
+import FacebookClone from "@/components/mdx/FacebookClone.mdx";
 
 import Images from "@/components/my-components/Projects/Images";
 import img1 from "../../asset/FacebookClone/img1.jpg";

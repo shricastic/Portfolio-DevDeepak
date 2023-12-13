@@ -1,3 +1,9 @@
+import { Quattrocento_Sans } from "next/font/google";
+const Font = Quattrocento_Sans({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export function Facebook() {
   return (
     <div className="h-full w-full">
@@ -101,6 +107,37 @@ export function Quote() {
       >
         <path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path>
       </svg>{" "}
+    </div>
+  );
+}
+export function FacebookClone() {
+  return (
+    <div
+      className={`py-4 w-max text-[2rem] md:text-6xl font-bold text-[#1778F2]  lg:flex-1 lg:py-0  `}
+    >
+      facebook clone
+    </div>
+  );
+}
+export function PDFReader() {
+  return (
+    <div
+      className={`py-4 text-center text-[2rem] md:text-6xl font-bold text-purple-500  [--translate:-100%] 0  md:[--translate:0%] lg:flex-1 lg:py-0 lg:[--translate:-12rem]  ${Font.className}`}
+    >
+      PDF Reader
+    </div>
+  );
+}
+
+export function SuperGuest() {
+  return (
+    <div className={`py-4 text-center lg:flex-1 lg:py-0`}>
+      <span
+        className={`w-max overflow-hidden border border-white text-[2rem] md:text-6xl font-bold text-white ${Font.className}`}
+      >
+        <span className="bg-red-500">Super</span>
+        <span>Guest</span>
+      </span>
     </div>
   );
 }

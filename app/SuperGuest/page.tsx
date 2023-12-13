@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import SuperGuest from "@/components/my-components/Projects/SuperGuest.mdx";
+import SuperGuest from "@/components/mdx/SuperGuest.mdx";
 import Images from "@/components/my-components/Projects/Images";
 interface Props {}
 import img1 from "../../asset/superguest/img1.png";
