@@ -24,7 +24,7 @@ const Project = [
   {
     id: "super-guest",
     description:
-      "Webapp that allows user to search about the location and they want to visit and see the best hotels available there.",
+      "Webapp that allows user to search about the location they want to visit and see the best hotels available there.",
     githubLink: "https://github.com/DevDeepakBhattarai/Travel_MVP",
     category: ["WebApp", "ChatGPT", "Design"],
     previewImage: SuperGuestImage,
