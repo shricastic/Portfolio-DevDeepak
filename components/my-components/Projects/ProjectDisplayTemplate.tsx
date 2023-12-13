@@ -88,7 +88,7 @@ export default function ProjectTemplate({
                 >
                   {category.map((name, index) => {
                     return (
-                      <span className="text-3xl font-sans font-bold">
+                      <span key={name} className="text-3xl font-sans font-bold">
                         {name} {index + 1 != category.length && ". "}
                       </span>
                     );

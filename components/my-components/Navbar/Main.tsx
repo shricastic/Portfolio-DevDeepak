@@ -57,7 +57,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
                 onClick={() => {
                   setOpen(false);
                 }}
-                className="group isolate relative"
+                className="group relative"
                 key={link}
                 initial={{
                   x: "-100%",
@@ -71,7 +71,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
                   ></motion.div>
                 )}
                 <Link
-                  className="absolute inset-0 px-2 grid items-center"
+                  className="absolute inset-0 z-50 px-2 grid items-center"
                   href={`#${link.replace(" ", "").toLowerCase()}`}
                 >
                   {link}
@@ -86,7 +86,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
             onClick={() => {
               setOpen(false);
             }}
-            className="group isolate relative"
+            className="group relative"
             initial={{
               x: "-100%",
               filter: "blur(5px)",
@@ -99,7 +99,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
               ></motion.div>
             )}
             <Link
-              className="absolute inset-0 px-2 grid items-center"
+              className="absolute z-50 inset-0 px-2 grid items-center"
               href={`#contactme`}
             >
               Testimonials
@@ -122,9 +122,17 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
             <svg
               stroke="var(--button-color)"
               fill="none"
-              className={`transition-all h-full w-full  duration-1000 md:group-aria-[expanded=true]:translate-x-[5px] 
-              md:group-aria-[expanded=true]:translate-y-[-5px]  group-aria-[expanded=true]:translate-x-[2px] 
-              group-aria-[expanded=true]:translate-y-[-2px] group-aria-[expanded=true]:rotate-[0.125turn]`}
+              className={`transition-all h-full w-full  duration-1000 
+
+              group-aria-[expanded=true]:translate-x-[3px] 
+              group-aria-[expanded=true]:translate-y-[-4px] 
+              group-aria-[expanded=true]:rotate-[0.125turn]
+
+              md:group-aria-[expanded=true]:translate-y-[-5px]  
+              md:group-aria-[expanded=true]:translate-x-[5px] 
+
+              lg:group-aria-[expanded=true]:translate-x-[4px] 
+              `}
               viewBox="-10 -10 120 120"
             >
               <path
