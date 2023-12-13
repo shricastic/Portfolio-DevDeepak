@@ -1,6 +1,10 @@
+import Navbar from "../my-components/Projects/Navbar";
+
 <video poster="pdf-reader.png" className="w-full" controls>
   <source src="/pdf-reader.mp4" type="video/mp4"></source>
 </video>
+
+<Navbar />
 
 # Chat with your PDF file
 
@@ -67,7 +71,8 @@ With these environment variables set up in both apps, you are now ready to run t
 3. Once both the apps are running navigate to `http://localhost:5000` to use the app
 
 export default ({ children }) => (
-  <div className="prose !max-w-screen-lg w-full [&>h1]:text-purple-700 p-4  bg-black text-white [&_:is(code,strong)]:text-white">
-    {children}
-  </div>
+
+<div className="prose !max-w-screen-lg w-full [&>h1]:text-purple-700 p-4  bg-black text-white [&_:is(code,strong)]:text-white">
+  {children}
+</div>
 );

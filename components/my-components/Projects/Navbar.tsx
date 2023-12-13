@@ -1,12 +1,8 @@
 "use client";
 import React, { ReactElement } from "react";
 import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
-interface Props {
-  link: string;
-}
 
-export default function Navbar({ link }: Props): ReactElement {
+export default function Navbar(): ReactElement {
   return (
     <div className="sticky top-0 flex items-center justify-between text-white h-16 mb-4 backdrop-filter backdrop-blur-lg">
       <a
