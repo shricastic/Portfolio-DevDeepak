@@ -15,6 +15,7 @@ export default function TestimonialTemplate({
   feedback,
   status,
   displacement,
+  image,
 }: Props): ReactElement {
   return (
     <div
@@ -31,8 +32,17 @@ export default function TestimonialTemplate({
         <div className="font-sans">{feedback}</div>
       </div>
       <div className="flex items-center gap-2">
-        <div className="rounded-full aspect-square h-16 bg-gray-400 border-black border" />
-        {/* <Image src={""}></Image> */}
+        <div className="rounded-full aspect-square relative h-16 bg-gray-400 border-black border">
+          {image && (
+            <Image
+              src={image}
+              height={64}
+              width={64}
+              alt={""}
+              className="border-white border rounded-full"
+            ></Image>
+          )}
+        </div>
         <div>
           <span className="font-semibold font-serif block">{giver}</span>
           <span className="font-serif font-thin block">{status}</span>
