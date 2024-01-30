@@ -9,7 +9,7 @@ import Footer from "@/components/my-components/Footer";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-clip">
       <section className="w-full">
         <div className="fixed top-0 h-screen w-full">
           <section

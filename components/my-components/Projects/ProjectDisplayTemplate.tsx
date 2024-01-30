@@ -36,7 +36,7 @@ export default function ProjectTemplate({
       <div className="flex flex-col-reverse min-height-screen items-center gap-8 lg:flex-row p-4 relative lg:space-y-0 md:p-32">
         <div
           ref={ref}
-          className="lg:h-screen  w-full text-white grid items-center"
+          className="lg:h-screen  w-full text-white grid items-center sticky top-0 "
         >
           <div className="space-y-8">
             <div className="space-y-8">
