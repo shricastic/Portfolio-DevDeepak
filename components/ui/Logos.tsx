@@ -141,3 +141,14 @@ export function SuperGuest() {
     </div>
   );
 }
+export function AlgorithmVisualizer() {
+  return (
+    <div className={`py-4 text-center lg:flex-1 lg:py-0`}>
+      <span
+        className={`w-max text-[2rem] md:text-5xl lg:text-6xl font-bold text-white ${Font.className}`}
+      >
+        Algorithm Visualizer
+      </span>
+    </div>
+  );
+}

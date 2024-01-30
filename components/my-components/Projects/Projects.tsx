@@ -1,11 +1,17 @@
 import React, { ReactElement } from "react";
 
 import ProjectSectionTitle from "./ProjectsSectionTitle";
-import FacebookCloneImage from "../../../asset/FacebookClone/img1.jpg";
-import SuperGuestImage from "../../../asset/superguest/img1.png";
-import PDFReaderImage from "../../../public/pdf-reader-showcase.png";
+import FacebookCloneImage from "@/asset/FacebookClone/img1.jpg";
+import SuperGuestImage from "@/asset/superguest/img1.png";
+import PDFReaderImage from "@/public/pdf-reader-showcase.png";
 import ProjectDisplayTemplate from "./ProjectDisplayTemplate";
-import { FacebookClone, PDFReader, SuperGuest } from "@/components/ui/Logos";
+import AlgorithmVisualizerImage from "@/public/algo-visualizer.png";
+import {
+  FacebookClone,
+  PDFReader,
+  SuperGuest,
+  AlgorithmVisualizer,
+} from "@/components/ui/Logos";
 
 const Project = [
   {
@@ -46,6 +52,19 @@ const Project = [
     logo: PDFReader,
     primaryColor: "from-purple-500",
     secondaryColor: "to-purple-900",
+  },
+  {
+    id: "algorithm-visualizer",
+    description:
+      "Interactive web application for visualizing and understanding various sorting algorithms, aiding users in learning and exploring algorithmic concepts.",
+    githubLink: "https://github.com/DevDeepakBhattarai/algo-visualizer",
+    category: ["DSA", "Algorithm", "Visualization"],
+    previewImage: AlgorithmVisualizerImage,
+    learnMoreLink: "/algo-visualizer",
+    color: "white",
+    logo: AlgorithmVisualizer,
+    primaryColor: "from-white/80",
+    secondaryColor: "to-black/10",
   },
 ];
 
