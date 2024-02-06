@@ -4,17 +4,20 @@ import { Metadata } from "next";
 const description =
   "Web app built with Flask designed for asking questions from your PDF. It utilizes ChatGPT directly without the API, making it completely free of cost.";
 const ogImageURL = "/pdf-reader-showcase.png";
-
+const title = "PDF Reader";
 export const metadata: Metadata = {
-  title: "PDF Reader",
+  title: title,
   description: description,
   openGraph: {
+    title: title,
     images: ogImageURL,
     description: description,
   },
   twitter: {
+    title: title,
     images: ogImageURL,
     description: description,
+    creator: "@deeepak_the_dev",
   },
 };
 

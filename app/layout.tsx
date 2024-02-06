@@ -6,10 +6,11 @@ const inter = Inter({ subsets: ["latin"] });
 const description =
   "Full-stack Web developer who builds website that are more than just functional.Proficient in React, Next.js, Prisma, Python, and adept at integrating ChatGPT and various other web and AI frameworks to create innovative and dynamic online experiences.";
 const ogImageURL = "/deepak-opengraph.jpg";
+const title = "Deepak Bhattarai";
 export const metadata: Metadata = {
   title: {
-    default: "Deepak Bhattarai",
-    template: "%s | Deepak Bhattarai",
+    default: title,
+    template: `%s | ${title}`,
   },
   description: description,
   authors: [{ name: "Deepak Bhattarai" }],
@@ -27,12 +28,15 @@ export const metadata: Metadata = {
   ],
   robots: { index: true, follow: true },
   openGraph: {
+    title: title,
     images: ogImageURL,
     description: description,
   },
   twitter: {
     images: ogImageURL,
+    title: title,
     description: description,
+    creator: "@deeepak_the_dev",
   },
 };
 

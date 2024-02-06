@@ -5,17 +5,20 @@ interface Props {}
 const description =
   "SortingVisualizer, a powerful and intuitive tool designed to help users understand and visualize various sorting algorithms. Whether you're a beginner learning about sorting algorithms or an experienced developer looking for a visual aid, this app is the perfect companion.";
 const ogImageURL = "/algo-visualizer.png";
-
+const title = "Algorithm Visualizer";
 export const metadata: Metadata = {
-  title: "Algorithm Visualizer",
+  title: title,
   description: description,
   openGraph: {
+    title: title,
     images: ogImageURL,
     description: description,
   },
   twitter: {
+    title: title,
     images: ogImageURL,
     description: description,
+    creator: "@deeepak_the_dev",
   },
 };
 export default function page({}: Props): ReactElement {

@@ -15,16 +15,18 @@ const ImageList = [img1, img2, img3, img4, img5, img6, img7];
 const description =
   "SuperGuest, an innovative website that utilizes the GPT-3.5 API to deliver an extraordinary hotel search experience. With advanced natural language processing, SuperGuest effortlessly finds the best hotels in any specified location. The website generates stunning outputs, showcasing high-quality images of the recommended hotels.";
 const ogImageURL = "/superguest.png";
-
+const title = "Super Guest";
 export const metadata: Metadata = {
-  title: "Super Guest",
+  title: title,
   description: description,
   openGraph: {
-    images: ogImageURL,
+    title: title,
     description: description,
+    images: ogImageURL,
   },
   twitter: {
     images: ogImageURL,
+    title: title,
     description: description,
   },
 };
