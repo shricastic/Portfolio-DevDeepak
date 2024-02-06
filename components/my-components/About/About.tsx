@@ -55,7 +55,7 @@ export default function About({}: Props): ReactElement {
                 className="
               aspect-auto rounded-full
               object-cover object-top md:rounded-2xl"
-                alt=""
+                alt="Image of Deepak Bhattarai, Developer who builds website that are more than just functional"
               />
             </div>
           </motion.div>

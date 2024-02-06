@@ -38,7 +38,7 @@ export default function TestimonialTemplate({
               src={image}
               height={64}
               width={64}
-              alt={""}
+              alt={`Image of ${giver}`}
               className="border-white border rounded-full"
             ></Image>
           )}
