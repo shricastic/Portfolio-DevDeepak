@@ -24,7 +24,13 @@ import img18 from "../../asset/FacebookClone/img18.jpg";
 import img19 from "../../asset/FacebookClone/img19.jpg";
 import img20 from "../../asset/FacebookClone/img20.jpg";
 import Wrapper from "@/components/page-wrapper";
-
+export const metadata = {
+  title: "Facebook Clone",
+  description:
+    "Facebook Clone is a web-based social networking platform that aims to replicate most of the features available on the original Facebook platform. Users can create accounts, connect with friends, post updates, share media, and engage in various forms of communication",
+  openGraph: { images: "/facebook-clone.jpg" },
+  twitter: { images: "/facebook-clone.jpg" },
+};
 interface Props {}
 const ImageList = [
   img1,
