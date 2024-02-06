@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     title: title,
     images: ogImageURL,
     description: description,
+    type: "profile",
   },
   twitter: {
     images: ogImageURL,

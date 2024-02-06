@@ -23,11 +23,13 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     images: ogImageURL,
+    type: "article",
   },
   twitter: {
     images: ogImageURL,
     title: title,
     description: description,
+    creator: "@deeepak_the_dev",
   },
 };
 export default function SuperGuestPage({}: Props): ReactElement {

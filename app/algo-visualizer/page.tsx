@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: title,
     images: ogImageURL,
     description: description,
+    type: "article",
   },
   twitter: {
     title: title,

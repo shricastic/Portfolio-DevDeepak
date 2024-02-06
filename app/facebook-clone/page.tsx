@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     title: title,
     images: metadataImageURL,
     description: metadataDescription,
+    type: "article",
   },
   twitter: {
     title: title,
