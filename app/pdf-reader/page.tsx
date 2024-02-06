@@ -1,12 +1,23 @@
 import PDFReader from "@/components/mdx/PDFReader.mdx";
 import Wrapper from "@/components/page-wrapper";
-export const metadata = {
+import { Metadata } from "next";
+const description =
+  "Web app built with Flask designed for asking questions from your PDF. It utilizes ChatGPT directly without the API, making it completely free of cost.";
+const ogImageURL = "/pdf-reader-showcase.png";
+
+export const metadata: Metadata = {
   title: "PDF Reader",
-  description:
-    "Web app build with flask which is used to ask question from the your pdf. It uses ChatGPT directly without the API so it is completely free of cost.",
-  openGraph: { images: "/pdf-reader-showcase.png" },
-  twitter: { images: "/pdf-reader-showcase.png" },
+  description: description,
+  openGraph: {
+    images: ogImageURL,
+    description: description,
+  },
+  twitter: {
+    images: ogImageURL,
+    description: description,
+  },
 };
+
 export default function page() {
   return (
     <Wrapper>

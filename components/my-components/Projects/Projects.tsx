@@ -16,6 +16,8 @@ import {
 const Project = [
   {
     id: "facebook-clone",
+    name: "Facebook Clone",
+
     description:
       "Clone of the original facebook; which has most of the features that the original site has including live feeds, stories, posting , audio, video calls and more",
     githubLink: "https://github.com/DevDeepakBhattarai/facebook-clone",
@@ -29,6 +31,7 @@ const Project = [
   },
   {
     id: "super-guest",
+    name: "Super Guest",
     description:
       "Webapp that allows user to search about the location they want to visit and see the best hotels available there.",
     githubLink: "https://github.com/DevDeepakBhattarai/Travel_MVP",
@@ -42,6 +45,7 @@ const Project = [
   },
   {
     id: "pdf-reader",
+    name: "PDF Reader",
     description:
       "Application made for people to quickly get information from their PDF files using ChatGPT like LLM",
     githubLink: "https://github.com/DevDeepakBhattarai/ask-your-pdf",
@@ -55,6 +59,8 @@ const Project = [
   },
   {
     id: "algorithm-visualizer",
+    name: "Algorithm Visualizer",
+
     description:
       "Interactive web application for visualizing and understanding various sorting algorithms, aiding users in learning and exploring algorithmic concepts.",
     githubLink: "https://github.com/DevDeepakBhattarai/algo-visualizer",
@@ -89,6 +95,7 @@ export default function Projects({}: Props): ReactElement {
               learnMoreLink={project.learnMoreLink}
               color={project.color}
               key={project.id}
+              name={project.name}
             >
               <project.logo />
             </ProjectDisplayTemplate>

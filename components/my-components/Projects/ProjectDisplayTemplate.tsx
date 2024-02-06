@@ -17,6 +17,7 @@ type Props = {
   githubLink: string;
   children: React.JSX.Element;
   color: string;
+  name: string;
 };
 
 export default function ProjectTemplate({
@@ -29,6 +30,7 @@ export default function ProjectTemplate({
   description,
   color,
   learnMoreLink,
+  name,
 }: Props): ReactElement {
   const ref = useRef<HTMLDivElement>(null);
   return (
@@ -184,7 +186,7 @@ export default function ProjectTemplate({
 
         <div>
           <div className="w-full aspect-video overflow-hidden rounded-lg shadow-sm shadow-white">
-            <Image src={previewImage} alt={description}></Image>
+            <Image src={previewImage} alt={`Preview image of ${name}`}></Image>
           </div>
         </div>
       </div>

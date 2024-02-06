@@ -10,13 +10,23 @@ import img5 from "../../asset/superguest/img5.png";
 import img6 from "../../asset/superguest/img6.png";
 import img7 from "../../asset/superguest/img7.png";
 import Wrapper from "@/components/page-wrapper";
+import { Metadata } from "next";
 const ImageList = [img1, img2, img3, img4, img5, img6, img7];
-export const metadata = {
+const description =
+  "SuperGuest, an innovative website that utilizes the GPT-3.5 API to deliver an extraordinary hotel search experience. With advanced natural language processing, SuperGuest effortlessly finds the best hotels in any specified location. The website generates stunning outputs, showcasing high-quality images of the recommended hotels.";
+const ogImageURL = "/superguest.png";
+
+export const metadata: Metadata = {
   title: "Super Guest",
-  description:
-    "SuperGuest,An innovative website that leverages the GPT-3.5 API to deliver an extraordinary hotel search experience. By utilizing advanced natural language processing, SuperGuest can effortlessly search for the best hotels in any specified location. The website generates stunning outputs, showcasing high-quality images of the recommended hotels.",
-  openGraph: { images: "/superguest.png" },
-  twitter: { images: "/superguest.png" },
+  description: description,
+  openGraph: {
+    images: ogImageURL,
+    description: description,
+  },
+  twitter: {
+    images: ogImageURL,
+    description: description,
+  },
 };
 export default function SuperGuestPage({}: Props): ReactElement {
   return (
