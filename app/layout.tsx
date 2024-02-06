@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: { url: ogImageURL, alt: `Image of ${title}` },
     title: title,
     description: description,
-    creator: "@deeepak_the_dev",
+    creator: "@deepak_the_dev",
   },
 };
 
