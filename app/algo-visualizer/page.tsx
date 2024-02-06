@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description: description,
   openGraph: {
     title: title,
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
     description: description,
     type: "article",
   },
   twitter: {
     title: title,
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
     description: description,
     creator: "@deeepak_the_dev",
   },

@@ -25,23 +25,24 @@ import img19 from "../../asset/FacebookClone/img19.jpg";
 import img20 from "../../asset/FacebookClone/img20.jpg";
 import Wrapper from "@/components/page-wrapper";
 import { Metadata } from "next";
-const metadataDescription =
+const description =
   "Facebook Clone is a web-based social networking platform that aims to replicate most of the features available on the original Facebook platform. Users can create accounts, connect with friends, post updates, share media, and engage in various forms of communication";
-const metadataImageURL = "/facebook-clone.jpg";
+const ogImageURL = "/facebook-clone.jpg";
 const title = "Facebook Clone";
 export const metadata: Metadata = {
   title: title,
-  description: metadataDescription,
+  description: description,
   openGraph: {
     title: title,
-    images: metadataImageURL,
-    description: metadataDescription,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
+
+    description: description,
     type: "article",
   },
   twitter: {
     title: title,
-    images: metadataImageURL,
-    description: metadataDescription,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
+    description: description,
     creator: "@deeepak_the_dev",
   },
 };

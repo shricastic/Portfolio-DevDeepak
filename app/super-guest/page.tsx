@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     description: description,
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
     type: "article",
   },
   twitter: {
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Preview Image of ${title}` },
     title: title,
     description: description,
     creator: "@deeepak_the_dev",

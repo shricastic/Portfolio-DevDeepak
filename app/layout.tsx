@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: title,
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Image of ${title}` },
     description: description,
     type: "profile",
   },
   twitter: {
-    images: ogImageURL,
+    images: { url: ogImageURL, alt: `Image of ${title}` },
     title: title,
     description: description,
     creator: "@deeepak_the_dev",
