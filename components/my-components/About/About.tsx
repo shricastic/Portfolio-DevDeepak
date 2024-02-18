@@ -26,7 +26,7 @@ export default function About({}: Props): ReactElement {
       className="relative z-[999] lg:h-screen bg-gradient-to-bl from-black to-slate-900"
     >
       <Navbar scrollYProgress={scrollYProgress}></Navbar>
-      <div className="relative flex min-h-screen h-max flex-col items-center lg:mt-4 xl:px-8">
+      <div className="relative flex min-h-screen h-max flex-col items-center xl:px-8">
         <div
           ref={targetRef}
           className="relative text-3xl p-4 font-bold tracking-widest text-white"

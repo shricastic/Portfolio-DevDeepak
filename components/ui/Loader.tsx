@@ -13,7 +13,7 @@ export default function Loader({}: Props): ReactElement {
           duration: 0.5,
         },
       }}
-      className="z-50 text-white fixed bottom-5 w-full h-32 p-4 flex items-center text-3d text-5xl"
+      className="z-50 loader text-white fixed bottom-5 w-full h-32 p-4 flex items-center text-3d text-5xl"
     >
       <motion.div
         animate={{
