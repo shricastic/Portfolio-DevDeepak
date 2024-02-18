@@ -42,7 +42,7 @@ export default function ProjectTemplate({
         >
           <div className="space-y-8">
             <div className="space-y-8">
-              <h1 className="h-16 py-1 relative overflow-hidden w-max">
+              <h1 className="hidden lg:block h-16 py-1 relative overflow-hidden w-max">
                 <motion.span
                   initial={{ opacity: 0 }}
                   whileInView={{
@@ -184,7 +184,43 @@ export default function ProjectTemplate({
           </div>
         </div>
 
-        <div>
+        <div className="space-y-8 lg:space-y-0">
+          <h1 className="block lg:hidden h-16 py-1 relative overflow-hidden w-max">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 0, delay: 0.7 },
+              }}
+              viewport={{ once: true }}
+            >
+              {children}
+            </motion.span>
+
+            <motion.span
+              initial={{
+                position: "absolute",
+                inset: 0,
+                right: "40%",
+                zIndex: 100,
+                backgroundColor: color,
+              }}
+              viewport={{ once: true }}
+              whileInView={{
+                right: ["0%", "0%"],
+                translateX: "150%",
+                transition: {
+                  right: {
+                    duration: 0.1,
+                  },
+                  translateX: {
+                    duration: 0.3,
+                    delay: 0.6,
+                  },
+                },
+              }}
+            ></motion.span>
+          </h1>
           <div className="w-full aspect-video overflow-hidden rounded-lg shadow-sm shadow-white">
             <Image src={previewImage} alt={`Preview image of ${name}`}></Image>
           </div>

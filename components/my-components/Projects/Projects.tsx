@@ -78,7 +78,10 @@ interface Props {}
 
 export default function Projects({}: Props): ReactElement {
   return (
-    <div className="bg-black relative z-50 overflow-visible" id="projects">
+    <div
+      className="bg-black relative z-50 overflow-visible pb-24"
+      id="projects"
+    >
       <ProjectSectionTitle></ProjectSectionTitle>
 
       <div className="space-y-24 pb-8 lg:pb-0 lg:space-y-0 ">
