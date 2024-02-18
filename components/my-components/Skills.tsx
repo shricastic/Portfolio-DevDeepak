@@ -36,8 +36,8 @@ const skillArray = [
 
 function Skill({ image, skill }: { image: StaticImageData; skill: string }) {
   return (
-    <div className="h-28  md:h-40 aspect-square shadow-md hover:scale-105 border border-white/20 shadow-white flex flex-col p-2 rounded-md hover:bg-gray-700 transition-all duration-150">
-      <div className="relative h-full w-full ">
+    <div className="h-28  md:h-40 aspect-1 shadow-md hover:scale-105 border border-white/20 shadow-white flex flex-col p-2 rounded-md hover:bg-gray-700 transition-all duration-150">
+      <div className="relative h-full w-full">
         <Image
           fill
           src={image}

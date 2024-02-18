@@ -7,7 +7,7 @@ export default function Footer({}: Props): ReactElement {
   return (
     <div className="bg-golden h-auto w-auto py-8 px-4 lg:py-14 lg:px-8 z-50 relative">
       <div
-        className="absolute -top-1 left-0 w-full overflow-hidden 
+        className="absolute -top-1 left-0 w-full overflow-clip 
       leading-[0] transform rotate-180"
       >
         <svg
@@ -27,7 +27,7 @@ export default function Footer({}: Props): ReactElement {
         <div className="space-y-4  lg:space-y-8 flex-1">
           <div className="flex items-center gap-2 md:gap-4">
             {" "}
-            <div className="rounded-full border border-black  h-10 md:h-16 aspect-square grid place-items-center hover:scale-105 transition-all duration-150">
+            <div className="rounded-full border border-black  h-10 md:h-16 aspect-1 grid place-items-center hover:scale-105 transition-all duration-150">
               <Mail></Mail>
             </div>
             <span className="text-base md:text-xl">
@@ -36,7 +36,7 @@ export default function Footer({}: Props): ReactElement {
           </div>
 
           <div className="flex items-center gap-2 md:gap-4">
-            <div className="rounded-full border border-black h-10 md:h-16 aspect-square grid place-items-center  hover:scale-105 transition-all duration-150">
+            <div className="rounded-full border border-black h-10 md:h-16 aspect-1 grid place-items-center  hover:scale-105 transition-all duration-150">
               <MapPin />
             </div>
             <span className="text-base md:text-xl">Jhapa,Nepal</span>

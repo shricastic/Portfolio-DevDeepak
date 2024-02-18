@@ -32,7 +32,7 @@ export default function TestimonialTemplate({
         <div className="font-sans">{feedback}</div>
       </div>
       <div className="flex items-center gap-2">
-        <div className="rounded-full aspect-square relative h-16 bg-gray-400 border-black border">
+        <div className="rounded-full aspect-1 relative h-16 bg-gray-400 border-black border">
           {image && (
             <Image
               src={image}
