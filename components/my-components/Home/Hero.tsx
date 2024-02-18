@@ -20,14 +20,20 @@ export default function Hero({}: Props): ReactElement {
       <div
         className={`${Font.className} relative bottom-4 text-white max-w-6xl px-6 text-[1.75rem] font-semibold leading-tight md:text-[2.5rem] lg:text-[3.5rem]`}
       >
-        Hello! I am{" "}
-        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 from-10%  via-golden via-15% to-purple-500 to-100%  lg:tracking-wide">
+        <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-purple-500 from-[1%]  to-white via-[5%]">
+          Hello!{" "}
+        </span>
+        I am{" "}
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 from-10%  via-golden via-15% to-yellow-500 to-100%  lg:tracking-wide">
           Deepak Bhattarai.
         </span>{" "}
         A developer who builds website that are{" "}
-        <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-r from-purple-500 from-10%  via-golden via-15% to-purple-500 to-100%">
+        <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 from-10%  via-golden via-15% to-yellow-500 to-100%">
           {" "}
-          more than just functional{" "}
+          more than just{" "}
+          <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-purple-500  via-golden via-15% to-purple-500 to-100%">
+            functional{" "}
+          </span>
         </span>
       </div>
     </div>

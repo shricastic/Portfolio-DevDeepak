@@ -42,6 +42,7 @@ function Skill({ image, skill }: { image: StaticImageData; skill: string }) {
           fill
           src={image}
           alt={`${skill.toUpperCase()}'s Logo`}
+          sizes="(min-width: 768px) 10rem, 7rem"
           className="object-contain"
         ></Image>
       </div>

@@ -46,7 +46,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
           onMouseLeave={() => {
             setActiveHover(-1);
           }}
-          className="flex p-4 w-full h-4/5 text-2xl flex-col [&>li]:flex-1 overflow-hidden"
+          className="flex p-4 w-full h-4/5 isolate text-2xl pt-4 space-y-4 flex-col [&>li]:flex-1 overflow-clip"
         >
           {ListOfLinks.map((link, index) => {
             return (
@@ -57,7 +57,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
                 onClick={() => {
                   setOpen(false);
                 }}
-                className="group relative"
+                className="relative"
                 key={link}
                 initial={{
                   x: "-100%",
@@ -67,11 +67,11 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
                 {activeHover === index && (
                   <motion.div
                     layoutId="hover-bg"
-                    className="absolute inset-0 -z-10 bg-gray-400 rounded-lg "
+                    className="absolute inset-0 bg-gray-400 rounded-lg "
                   ></motion.div>
                 )}
                 <Link
-                  className="absolute inset-0 z-50 px-2 grid items-center"
+                  className="relative z-50 px-2 h-full w-full grid items-center justify-center lg:justify-start"
                   href={`#${link.replace(" ", "").toLowerCase()}`}
                 >
                   {link}
@@ -95,11 +95,11 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
             {activeHover === 6 && (
               <motion.div
                 layoutId="hover-bg"
-                className="absolute inset-0 -z-10 bg-gray-400 rounded-lg "
+                className="absolute inset-0 bg-gray-400 rounded-lg "
               ></motion.div>
             )}
             <Link
-              className="absolute z-50 inset-0 px-2 grid items-center"
+              className="relative z-50 px-2 h-full w-full grid items-center justify-center lg:justify-start"
               href={`#contactme`}
             >
               Testimonials

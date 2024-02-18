@@ -52,6 +52,7 @@ export default function About({}: Props): ReactElement {
               <Image
                 fill
                 src={"/deepak.jpg"}
+                sizes="(min-width: 768px) 20rem,(min-width: 1024px) 24rem, 10rem"
                 className="
               aspect-auto rounded-full
               object-cover object-top md:rounded-2xl"
