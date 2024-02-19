@@ -10,7 +10,6 @@ interface Props {
   status: string;
   displacement: number;
 }
-
 function getInitials(fullName: string): string {
   const names = fullName.split(" ");
 
@@ -24,7 +23,6 @@ function getInitials(fullName: string): string {
     return "";
   }
 }
-
 export default function TestimonialTemplate({
   giver,
   feedback,
@@ -33,31 +31,33 @@ export default function TestimonialTemplate({
   image,
 }: Props): ReactElement {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="rounded-lg shadow-lg w-64">
-        <div className="h-24 bg-blue-600 rounded-t-lg" />
-
-        <Avatar>
-          <AvatarImage src={image}></AvatarImage>
-          <AvatarFallback>{getInitials(giver)}</AvatarFallback>
-        </Avatar>
-        <div className="text-center mt-2">
-          <h2 className="text-lg font-semibold">John Doe</h2>
-          <p className="text-gray-500">Software Engineer</p>
+    <div
+      className={cn(
+        "rounded-lg relative border border-white shadow-md shadow-white p-2 space-y-2",
+        displacement > 0 ? "lg:left-8" : "left-0"
+      )}
+    >
+      <div>
+        <div className="h-12 w-12">
+          <Quote></Quote>
         </div>
-        <div className="flex justify-around my-4">
-          <div className="text-center">
-            <h3 className="font-semibold text-lg">500</h3>
-            <p className="text-gray-500">Followers</p>
-          </div>
-          <div className="text-center">
-            <h3 className="font-semibold text-lg">300</h3>
-            <p className="text-gray-500">Following</p>
-          </div>
+
+        <div className="font-sans">{feedback}</div>
+      </div>
+      <div className="flex items-center gap-2">
+        <div className="rounded-full aspect-1 relative h-16 bg-gray-400 border-black border">
+          <Avatar className="h-16 w-16 border border-white">
+            <AvatarImage src={image}></AvatarImage>
+            <AvatarFallback className=" text-black font-bold">
+              {getInitials(giver)}
+            </AvatarFallback>
+          </Avatar>
+        </div>
+        <div>
+          <span className="font-semibold font-serif block">{giver}</span>
+          <span className="font-serif font-thin block">{status}</span>
         </div>
       </div>
     </div>
   );
 }
-
-export function Component() {}
