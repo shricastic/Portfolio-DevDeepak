@@ -1,11 +1,14 @@
 import React, { ReactElement } from "react";
 import { Mail, MapPin } from "lucide-react";
-import { Github, Reddit, X, Youtube } from "@/components/ui/Logos";
+import { Github, Reddit, X, Youtube, Linkedin } from "@/components/ui/Logos";
 interface Props {}
 
 export default function Footer({}: Props): ReactElement {
   return (
-    <div className="bg-golden h-auto w-auto py-8 px-4 lg:py-14 lg:px-8 z-50 relative">
+    <div
+      id="contactme"
+      className="bg-golden h-auto w-auto py-8 px-4 lg:py-14 lg:px-8 z-50 relative"
+    >
       <div
         className="absolute -top-1 left-0 w-full overflow-clip 
       leading-[0] transform rotate-180"
@@ -69,6 +72,12 @@ export default function Footer({}: Props): ReactElement {
               className="hover:scale-95 transition-transform duration-150 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16"
             >
               <X></X>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/developer-deepak-bhattarai/"
+              className="hover:scale-95 transition-transform duration-150 grid place-items-center h-8 w-8 lg:h-16 rounded-full lg:w-16"
+            >
+              <Linkedin></Linkedin>
             </a>
           </div>
         </div>
