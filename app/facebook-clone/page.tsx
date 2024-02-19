@@ -16,13 +16,7 @@ import img11 from "../../asset/FacebookClone/img11.jpg";
 import img12 from "../../asset/FacebookClone/img12.jpg";
 import img13 from "../../asset/FacebookClone/img13.jpg";
 import img14 from "../../asset/FacebookClone/img14.jpg";
-import img15 from "../../asset/FacebookClone/img15.jpg";
-import img16 from "../../asset/FacebookClone/img16.jpg";
 
-import img17 from "../../asset/FacebookClone/img17.jpg";
-import img18 from "../../asset/FacebookClone/img18.jpg";
-import img19 from "../../asset/FacebookClone/img19.jpg";
-import img20 from "../../asset/FacebookClone/img20.jpg";
 import Wrapper from "@/components/page-wrapper";
 import { Metadata } from "next";
 const description =
@@ -62,18 +56,12 @@ const ImageList = [
   img12,
   img13,
   img14,
-  img15,
-  img16,
-  img17,
-  img18,
-  img19,
-  img20,
 ];
 
 export default function FBClone({}: Props): ReactElement {
   return (
     <Wrapper>
-      <div className="lg:flex bg-black text-white lg:flex-row-reverse lg:h-screen lg:overflow-y-hidden">
+      <div className="lg:flex bg-black text-white lg:flex-row-reverse lg:h-screen lg:overflow-y-clip">
         <Images images={ImageList} />
         <FacebookClone></FacebookClone>
       </div>

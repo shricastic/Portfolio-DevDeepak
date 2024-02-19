@@ -1,16 +1,13 @@
 import type { Config } from "tailwindcss";
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
-import defaultTheme from "tailwindcss/defaultTheme";
 import svgToDataUri from "mini-svg-data-uri";
-import colors from "tailwindcss/colors";
-
 const config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,mdx}",
+    "./components/**/*.{ts,tsx,mdx}",
+    "./app/**/*.{ts,tsx,mdx}",
+    "./src/**/*.{ts,tsx,mdx}",
   ],
   prefix: "",
   theme: {
@@ -96,6 +93,8 @@ const config = {
     },
   },
   plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-scrollbar"),
     require("tailwindcss-animate"),
     require("@tailwindcss/aspect-ratio"),
     addVariablesForColors,
