@@ -16,7 +16,14 @@ interface Props {
   scrollYProgress: MotionValue<number>;
 }
 
-const ListOfLinks = ["Home", "About", "Projects", "Skills", "Contact Me"];
+const ListOfLinks = [
+  "Home",
+  "About",
+  "Projects",
+  "Skills",
+  "Testimonial",
+  "Contact Me",
+];
 const Navbar = ({ scrollYProgress }: Props): ReactElement => {
   const controls = useAnimation();
   const [open, setOpen] = useState(false);
@@ -78,33 +85,7 @@ const Navbar = ({ scrollYProgress }: Props): ReactElement => {
                 </Link>
               </motion.li>
             );
-          })}
-          <motion.li
-            onMouseEnter={() => {
-              setActiveHover(6);
-            }}
-            onClick={() => {
-              setOpen(false);
-            }}
-            className="group relative"
-            initial={{
-              x: "-100%",
-              filter: "blur(5px)",
-            }}
-          >
-            {activeHover === 6 && (
-              <motion.div
-                layoutId="hover-bg"
-                className="absolute inset-0 bg-gray-400 rounded-lg "
-              ></motion.div>
-            )}
-            <Link
-              className="relative z-50 px-2 h-full w-full grid items-center justify-center lg:justify-start"
-              href={`#contactme`}
-            >
-              Testimonials
-            </Link>
-          </motion.li>
+          })}{" "}
         </motion.ul>
 
         <div

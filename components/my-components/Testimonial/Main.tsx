@@ -15,7 +15,7 @@ export default function Main({}: Props): ReactElement {
         </div>
 
         <div className="flex items-center flex-col justify-center w-full p-4 overflow-hidden lg:flex-row gap-4">
-          <div className="h-full max-w-6xl">
+          <div className="h-full max-w-5xl">
             <Testimonials></Testimonials>
           </div>
         </div>

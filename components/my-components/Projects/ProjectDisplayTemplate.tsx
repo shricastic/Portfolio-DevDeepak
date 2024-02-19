@@ -169,9 +169,9 @@ export default function ProjectTemplate({
                 </Link>
 
                 <span className="relative">
-                  <span
+                  <div
                     className={`absolute -inset-10 -z-10 bg-gradient-radial ${primaryColor} to-transparent opacity-70 blur-md transition-all duration-150 `}
-                  ></span>
+                  ></div>
                   <a
                     href={githubLink}
                     className={`group relative cursor-pointer isolate rounded-md bg-gradient-to-br ${primaryColor} ${secondaryColor} px-8 py-2.5 transition-all duration-150  active:scale-90`}
