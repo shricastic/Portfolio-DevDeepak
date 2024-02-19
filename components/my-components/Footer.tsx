@@ -10,7 +10,7 @@ export default function Footer({}: Props): ReactElement {
       className="bg-golden h-auto w-auto py-8 px-4 lg:py-14 lg:px-8 z-50 relative"
     >
       <div
-        className="absolute -top-1 left-0 w-full overflow-clip 
+        className="absolute -top-[2px] lg:-top-1 left-0 w-full overflow-clip 
       leading-[0] transform rotate-180"
       >
         <svg
@@ -26,6 +26,7 @@ export default function Footer({}: Props): ReactElement {
           ></path>
         </svg>
       </div>
+
       <div className="flex flex-col md:flex-row justify-between gap-4 ">
         <div className="space-y-4  lg:space-y-8 flex-1">
           <div className="flex items-center gap-2 md:gap-4">
