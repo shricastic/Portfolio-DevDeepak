@@ -166,6 +166,7 @@ export default function ProjectTemplate({
                   className="rounded-md bg-white px-4 py-2 font-bold cursor-pointer text-black transition-all duration-150 hover:bg-white/70 active:scale-90"
                 >
                   Learn More
+                  <span className="sr-only">Learn More About {name}</span>
                 </Link>
 
                 <span className="relative">
@@ -176,7 +177,10 @@ export default function ProjectTemplate({
                     href={githubLink}
                     className={`group relative cursor-pointer isolate rounded-md bg-gradient-to-br ${primaryColor} ${secondaryColor} px-8 py-2.5 transition-all duration-150  active:scale-90`}
                   >
-                    <span className="relative z-20">Code</span>
+                    <span className="relative z-20">
+                      Code
+                      <span className="sr-only">See the code of {name}</span>
+                    </span>
                     <span className="absolute inset-[1px] z-10 rounded-md bg-black transition-all duration-150 group-hover:opacity-0"></span>
                   </a>
                 </span>

@@ -47,7 +47,7 @@ export default function TestimonialTemplate({
       <div className="flex items-center gap-2">
         <div className="rounded-full aspect-1 relative h-16 bg-gray-400 border-black border">
           <Avatar className="h-16 w-16 border border-white">
-            <AvatarImage src={image}></AvatarImage>
+            <AvatarImage alt={`Image of ${giver}`} src={image}></AvatarImage>
             <AvatarFallback className=" text-black font-bold">
               {getInitials(giver)}
             </AvatarFallback>
