@@ -71,7 +71,7 @@ export default function Hero({}: Props): ReactElement {
         <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 from-10%  via-golden via-15% to-yellow-500 to-100%  lg:tracking-wide">
           Deepak Bhattarai.
         </span>{" "}
-        A developer who builds website that are{" "}
+        A developer who builds websites that are{" "}
         <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 from-10%  via-golden via-15% to-yellow-500 to-100%">
           {" "}
           more than just{" "}
