@@ -19,7 +19,8 @@ type Props = {
   color: string;
   name: string;
 };
-
+const duration = 0.5;
+const delay = 0.5;
 export default function ProjectTemplate({
   category,
   previewImage,
@@ -84,7 +85,7 @@ export default function ProjectTemplate({
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    transition: { duration: 0, delay: 0.7 },
+                    transition: { duration, delay },
                   }}
                   viewport={{ once: true }}
                 >
@@ -114,8 +115,8 @@ export default function ProjectTemplate({
                         duration: 0.1,
                       },
                       translateX: {
-                        duration: 0.3,
-                        delay: 0.6,
+                        duration,
+                        delay,
                       },
                     },
                   }}
@@ -126,7 +127,7 @@ export default function ProjectTemplate({
                   initial={{ opacity: 0 }}
                   whileInView={{
                     opacity: 1,
-                    transition: { duration: 0, delay: 0.7 },
+                    transition: { duration, delay },
                   }}
                   viewport={{ once: true }}
                 >
@@ -147,11 +148,11 @@ export default function ProjectTemplate({
                     translateX: "150%",
                     transition: {
                       right: {
-                        duration: 0.1,
+                        duration,
                       },
                       translateX: {
-                        duration: 0.3,
-                        delay: 0.6,
+                        duration,
+                        delay,
                       },
                     },
                   }}
@@ -190,7 +191,7 @@ export default function ProjectTemplate({
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                transition: { duration: 0, delay: 0.7 },
+                transition: { duration, delay },
               }}
               viewport={{ once: true }}
             >
@@ -211,11 +212,11 @@ export default function ProjectTemplate({
                 translateX: "150%",
                 transition: {
                   right: {
-                    duration: 0.1,
+                    duration,
                   },
                   translateX: {
-                    duration: 0.3,
-                    delay: 0.6,
+                    duration,
+                    delay,
                   },
                 },
               }}

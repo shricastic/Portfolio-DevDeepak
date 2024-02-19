@@ -79,7 +79,7 @@ interface Props {}
 export default function Projects({}: Props): ReactElement {
   return (
     <div
-      className="bg-black relative z-50 overflow-visible pb-24"
+      className="bg-black relative z-50 overflow-visible pb-24 "
       id="projects"
     >
       <ProjectSectionTitle></ProjectSectionTitle>
@@ -87,21 +87,23 @@ export default function Projects({}: Props): ReactElement {
       <div className="space-y-24 pb-8 lg:pb-0 lg:space-y-0 ">
         {Project.map((project) => {
           return (
-            <ProjectDisplayTemplate
-              id={project.id}
-              description={project.description}
-              githubLink={project.githubLink}
-              previewImage={project.previewImage}
-              category={project.category}
-              primaryColor={project.primaryColor}
-              secondaryColor={project.secondaryColor}
-              learnMoreLink={project.learnMoreLink}
-              color={project.color}
-              key={project.id}
-              name={project.name}
-            >
-              <project.logo />
-            </ProjectDisplayTemplate>
+            <div className="border border-white pb-8 lg:pb-0 lg:border-none rounded-lg">
+              <ProjectDisplayTemplate
+                id={project.id}
+                description={project.description}
+                githubLink={project.githubLink}
+                previewImage={project.previewImage}
+                category={project.category}
+                primaryColor={project.primaryColor}
+                secondaryColor={project.secondaryColor}
+                learnMoreLink={project.learnMoreLink}
+                color={project.color}
+                key={project.id}
+                name={project.name}
+              >
+                <project.logo />
+              </ProjectDisplayTemplate>
+            </div>
           );
         })}
       </div>

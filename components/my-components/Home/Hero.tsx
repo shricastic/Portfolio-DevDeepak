@@ -1,6 +1,14 @@
+"use client";
 import { Montserrat } from "next/font/google";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { Spotlight } from "./Spotlight";
+import ScrollDownIndicator from "@/components/ui/ScrollDownIndicator";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 interface Props {}
 
@@ -8,17 +16,53 @@ const Font = Montserrat({
   weight: ["400", "600", "700", "900"],
   subsets: ["latin"],
 });
+const delay = 3000;
+
 export default function Hero({}: Props): ReactElement {
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [shouldTheScrollIndicatorBeShown, setShouldTheScrollIndicatorBeShown] =
+    useState(false);
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
+
+  // ! Make the scroll Indicator visible 5 sec after the shapes have loaded
+  const timerRef = useRef<NodeJS.Timeout>();
+  useEffect(() => {
+    if (!hasScrolled) {
+      timerRef.current = setTimeout(() => {
+        setShouldTheScrollIndicatorBeShown(true);
+      }, delay);
+    }
+    return () => {
+      clearTimeout(timerRef.current);
+    };
+  }, [hasScrolled]);
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest !== 0) setHasScrolled(true);
+  });
+
   return (
-    <div className="relative overflow-clip min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2]  flex items-center justify-center">
+    <motion.div
+      ref={targetRef}
+      className="relative overflow-clip min-h-screen w-full bg-black bg-grid-white/[0.2]  flex items-center justify-center"
+    >
       {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] text-white"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] text-white" />
+
       <Spotlight
         className="top-16 left-10 md:left-50 md:-top-20 lg:left-96 xl:left-[27rem]"
         fill="white"
       />
-      <div
-        className={`${Font.className} relative bottom-4 text-white max-w-6xl px-6 text-[1.75rem] font-semibold leading-tight md:text-[2.5rem] lg:text-[3.5rem]`}
+
+      <motion.div
+        style={{ y }}
+        className={`${Font?.className} relative bottom-4 text-white max-w-6xl px-6 text-[1.75rem] font-semibold leading-tight md:text-[2.5rem] lg:text-[3.5rem]`}
       >
         <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-purple-500 from-[1%]  to-white via-[5%]">
           Hello!{" "}
@@ -35,7 +79,12 @@ export default function Hero({}: Props): ReactElement {
             functional{" "}
           </span>
         </span>
-      </div>
-    </div>
+      </motion.div>
+      {shouldTheScrollIndicatorBeShown && (
+        <ScrollDownIndicator
+          scrollYProgress={scrollYProgress}
+        ></ScrollDownIndicator>
+      )}
+    </motion.div>
   );
 }
