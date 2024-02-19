@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     default: title,
     template: `%s | ${title}`,
   },
+  metadataBase: new URL("https://deepak-bhattarai.com.np"),
   description: description,
   authors: [{ name: "Deepak Bhattarai" }],
   category: "Portfolio",
