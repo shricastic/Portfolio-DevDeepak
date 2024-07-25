@@ -16,17 +16,19 @@ import FramerMotionLogo from "../../public/framermotion.svg";
 import TensorFlowLogo from "../../public/TensorflowLogo.png";
 import HuggingFaceLogo from "../../public/hf-logo.png";
 import PineconeDB from "../../public/PineconeLogo.svg";
+import Langchain from "../../public/langchain.svg";
 const skillArray = [
   { image: ReactLogo, skill: "React" },
+  { image: ChatGPTLogo, skill: "ChatGPT API" },
   { image: NextLogo, skill: "Next.js" },
-  { image: NodeLogo, skill: "Node.js" },
+  { image: Langchain, skill: "Langchain" },
   { image: MySQLLogo, skill: "MySQL" },
   { image: PostgresLogo, skill: "Postgres" },
   { image: PineconeDB, skill: "Pinecone" },
   { image: JSLogo, skill: "JavaScript" },
   { image: FirebaseLogo, skill: "Firebase" },
   { image: TailwindCSSLogo, skill: "Tailwind CSS" },
-  { image: ChatGPTLogo, skill: "ChatGPT API" },
+  { image: NodeLogo, skill: "Node.js" },
   { image: PythonLogo, skill: "Python" },
   { image: ReduxLogo, skill: "Redux" },
   { image: FramerMotionLogo, skill: "Framer Motion" },
