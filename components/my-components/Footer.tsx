@@ -35,7 +35,7 @@ export default function Footer({}: Props): ReactElement {
               <Mail></Mail>
             </div>
             <span className="text-base md:text-xl">
-              deepakbhattarai289@gmail.com
+              contact@deepak-bhattarai.com.np
             </span>
           </div>
 
